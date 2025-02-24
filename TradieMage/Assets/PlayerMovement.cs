@@ -2,6 +2,7 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
+using Unity.Android.Types;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,8 @@ public class PlayerMovement : MonoBehaviour
     public float jumpPower = 10f;
     private int jumpsRemaining = 0;
     public int maxJumps = 1;
+    //public int jumpTimerMax = 5; //maybe?
+    //private int jumpTimer = 0;
 
     [Header("Groundcheck")]
     public Transform groundCheckPosition;
@@ -34,7 +37,15 @@ public class PlayerMovement : MonoBehaviour
     {
         rigidBody.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rigidBody.linearVelocity.y);
 
+        /*
+        if (jumpTimer > 0)
+        {
+            jumpTimer--;
+        }
+        */
         GroundCheck();
+
+
 
     }
 
@@ -48,10 +59,11 @@ public class PlayerMovement : MonoBehaviour
         if (jumpsRemaining > 0) 
         {
             //On press jumpbutton
-            if (context.performed)
+            if (context.performed )
             {
                 rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocityX, jumpPower);
                 jumpsRemaining--;
+                //jumpTimer = jumpTimerMax;
             }
             //onrelease jump button
             else if (context.canceled)
@@ -65,10 +77,15 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundCheck()
     {
-        if (Physics2D.OverlapBox(groundCheckPosition.position, groundCheckSize, 0, groundLayer))
+        if (Physics2D.OverlapBox(groundCheckPosition.position, groundCheckSize, 0, groundLayer)/* && jumpTimer == 0*/)
         {
             jumpsRemaining = maxJumps;
+
             //print("onground");
+        }
+        else//if("player has double jump ability or something")
+        {
+            jumpsRemaining = 0;
         }
     }
 
