@@ -1,0 +1,1956 @@
+fileFormatVersion: 2
+guid: 6fd5653b5b172944dbabf13668b3bc4e
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: 1572574854147563163
+    second: TradieMageAssetsWIP1_0
+  - first:
+      213: 2207682439970253121
+    second: TradieMageAssetsWIP1_1
+  - first:
+      213: -4197390388175656682
+    second: TradieMageAssetsWIP1_2
+  - first:
+      213: -6405420433862838902
+    second: TradieMageAssetsWIP1_3
+  - first:
+      213: 9083533212370313733
+    second: TradieMageAssetsWIP1_4
+  - first:
+      213: 4517250999211743481
+    second: TradieMageAssetsWIP1_5
+  - first:
+      213: 5936968031732258822
+    second: TradieMageAssetsWIP1_6
+  - first:
+      213: -6044377092022437838
+    second: TradieMageAssetsWIP1_7
+  - first:
+      213: -7608347273235714767
+    second: TradieMageAssetsWIP1_8
+  - first:
+      213: -6753191525815965556
+    second: TradieMageAssetsWIP1_9
+  - first:
+      213: 7744919776214822362
+    second: TradieMageAssetsWIP1_10
+  - first:
+      213: 5448946344684704924
+    second: TradieMageAssetsWIP1_11
+  - first:
+      213: -8753831908088716590
+    second: TradieMageAssetsWIP1_12
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 8
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: iOS
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Android
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: WindowsStoreApps
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_0
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: b9e5d2c7f78e2d510800000000000000
+      internalID: 1572574854147563163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_1
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 248
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 1496b4b7b7343ae10800000000000000
+      internalID: 2207682439970253121
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 619a6214eafdfb5c0800000000000000
+      internalID: -4197390388175656682
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_3
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: a85b3928d006b17a0800000000000000
+      internalID: -6405420433862838902
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_4
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 502abcc74513f0e70800000000000000
+      internalID: 9083533212370313733
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_5
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 9f85b41b9df70be30800000000000000
+      internalID: 4517250999211743481
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 608504e28f8546250800000000000000
+      internalID: 5936968031732258822
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_7
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2387e7d2f0f0e1ca0800000000000000
+      internalID: -6044377092022437838
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_8
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 13d29fa3778b96690800000000000000
+      internalID: -7608347273235714767
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_9
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c88af835618d742a0800000000000000
+      internalID: -6753191525815965556
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_10
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: addae2b808b7b7b60800000000000000
+      internalID: 7744919776214822362
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_11
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: c94581ba4db8e9b40800000000000000
+      internalID: 5448946344684704924
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_12
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: 2d264e66244248680800000000000000
+      internalID: -8753831908088716590
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_13
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0288da46735e9a048b4f9864cfab7c82
+      internalID: 1998817035
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_14
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f77e3ac983d494647a18a8de9848dceb
+      internalID: 271886017
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_15
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1be8b7b7ad171c540bc849030e57e6cc
+      internalID: 1909757615
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_16
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7aaa0c589699fd344bcef7d3d5cd5f04
+      internalID: 1403608859
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_17
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f145e2ebc7d6c1d44817a09d6120f448
+      internalID: 185663725
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_18
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 240
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a4973da5f64e5be4db5de5e8045324f3
+      internalID: 169348388
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7a6d2b21a83b76942930fd7ea9b4725f
+      internalID: -160564231
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_20
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ba7484ddd0e5634b888a3145494ff0a
+      internalID: 1047532633
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_21
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fba5eb6485ff4bb4585cee914cb60f0e
+      internalID: 1375027366
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_22
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 96aec7ecf8c5c844e82b4bc96ea6dfc7
+      internalID: -595377526
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_23
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2c78e82dc26616f4a8e00c8abcd68515
+      internalID: -601103441
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_24
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cddfc0143ba49f449738f61d15fd16d
+      internalID: 2141161560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_25
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4fd3e9e188d93854e8b8da2eb7db7151
+      internalID: 2061632945
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_26
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 37c906a02ab48a44ba9fda1e5633f561
+      internalID: -792883209
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_27
+      rect:
+        serializedVersion: 2
+        x: 80
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3e3d4115f3bf1ba4da2edc80db88d9ee
+      internalID: -995512884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_28
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9893aa12287de574599487a30af5d9f9
+      internalID: -1583841626
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_29
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 232
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1013dbaa4148dde4b880be90579ac942
+      internalID: -867155197
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_30
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 136ce8ba60e444e4288120ff26440286
+      internalID: 639330683
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_31
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d263f9fa26d2d445bd6f6c50db50ebe
+      internalID: -1987965877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_32
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bc1346b655995ee4e85491941060b0c1
+      internalID: 543989165
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_33
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7df9177c478a3134bac470f1a31ff25c
+      internalID: -1438625694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_34
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c938fa7fd7f841a41bcfa4f29574703c
+      internalID: -770116315
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_35
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6066da943428951468d5a5aa7a4ac76b
+      internalID: -1107532860
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_36
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f80ec71bf1f51ab44ab2b2be211a0149
+      internalID: 275531770
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_37
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5dd230d2f81767f4c966a4d99209f740
+      internalID: 223307323
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_38
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e3a6e9a668b0ba443bb8cea5d94dfb6c
+      internalID: 1081017706
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_39
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 14a9af5b0eb656241b2fb6f68a59012f
+      internalID: -982760528
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_40
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfa607e0d3bcce24a894f2d2674b654c
+      internalID: 1850960166
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_41
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cf72ab90015a5a4da82126de984de80
+      internalID: 1569836500
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_42
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 224
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d79bbdee4ed7d946a7947d718b38d12
+      internalID: -1946397173
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_43
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: af638c964aa8d544b9f4266f3d201e25
+      internalID: 1470002834
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_44
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f03d36b9e6b62e442a17c43e3f95e7f5
+      internalID: -1597159140
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_45
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 73e39de5c4eef484fb9a19dd549986f9
+      internalID: 35929169
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_46
+      rect:
+        serializedVersion: 2
+        x: 56
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7ab4b04c2672c9642b21dad6b61b28fc
+      internalID: 459216224
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_47
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c4ad000ac0d586a4e9f73b3d120f55a0
+      internalID: -929745769
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_48
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 34eab8e74045f2d418a109328f773396
+      internalID: 1633469750
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_49
+      rect:
+        serializedVersion: 2
+        x: 88
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 566fcacf813fbe94ab3a96d19db40389
+      internalID: -1117165430
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_50
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d2832785c0e587d4888e26cb42d01d20
+      internalID: -859754287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_51
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b933e85ef37b69648b11ce4de12100c5
+      internalID: 756058982
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_52
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ef89191f881a08d40bca10a56a808610
+      internalID: -277045176
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_53
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 297ae4459c9e87a439463bf354e00a6a
+      internalID: -904300543
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_54
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 514bbaba894dcce40b84bdf318624f2b
+      internalID: -1830364544
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_55
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c5b16ca9eb2c2fe419d8d7035ba21760
+      internalID: 751091466
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_56
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 620afc9908309e04da7c90dee57f8e86
+      internalID: 898782241
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_57
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 216
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d9c71cc47e0cbea41b9a0ea3738de2ff
+      internalID: -742674180
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_58
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0191604a07692e49be97b8e42318fb0
+      internalID: -277798561
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_59
+      rect:
+        serializedVersion: 2
+        x: 24
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ee6fc254ecc99e48a3e1330cc239d66
+      internalID: -85475665
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_60
+      rect:
+        serializedVersion: 2
+        x: 64
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7306550b1b123f54f98eecf9888d838f
+      internalID: -1289244607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_61
+      rect:
+        serializedVersion: 2
+        x: 72
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3359b8a1488e4d14c83ee47f08b401e5
+      internalID: -1976201921
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_62
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e54d609e330d738419c63737fd7ad4e3
+      internalID: -1117617345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_63
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e876314dd27e9e34bae4eed0e4978619
+      internalID: 632006570
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_64
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c76615d37c337b1448ee10bc35c14061
+      internalID: -1635161252
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_65
+      rect:
+        serializedVersion: 2
+        x: 128
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75f3afe66c058c3499f51749f86a192a
+      internalID: 1065409439
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_66
+      rect:
+        serializedVersion: 2
+        x: 136
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 148c03af70b1ac14497f25ee7ff05345
+      internalID: 824397097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_67
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f00ce2362cc4b8c49a014b7052670eab
+      internalID: -2069676175
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_68
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ff3652bfacc2d394496aa99ef8532c82
+      internalID: -1212080974
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_69
+      rect:
+        serializedVersion: 2
+        x: 160
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ab744c81ab680e94489c011490f41587
+      internalID: -1856464971
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_70
+      rect:
+        serializedVersion: 2
+        x: 176
+        y: 208
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 77f4689b4f92a5746bfd7042caa797ed
+      internalID: 323670701
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_71
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8618d01da2434704ca2754cefc163425
+      internalID: 1205339537
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_72
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0ba08c5a0095ffb44858762a665c809b
+      internalID: 1076682818
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_73
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 200
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a67b1ee3947f6e4439ff0c2eed5c114e
+      internalID: 1911544786
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_74
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 192
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: edaff6bfad158b54da1b8d66cd94b275
+      internalID: 803428369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_75
+      rect:
+        serializedVersion: 2
+        x: 8
+        y: 192
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b071c2b153b68884b876a4073bc44c0c
+      internalID: 562286102
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: cad3715dbecc0cc48af1f9853e861442
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries: []
+    nameFileIdTable:
+      TradieMageAssetsWIP1_0: 1572574854147563163
+      TradieMageAssetsWIP1_1: 2207682439970253121
+      TradieMageAssetsWIP1_10: 7744919776214822362
+      TradieMageAssetsWIP1_11: 5448946344684704924
+      TradieMageAssetsWIP1_12: -8753831908088716590
+      TradieMageAssetsWIP1_13: 1998817035
+      TradieMageAssetsWIP1_14: 271886017
+      TradieMageAssetsWIP1_15: 1909757615
+      TradieMageAssetsWIP1_16: 1403608859
+      TradieMageAssetsWIP1_17: 185663725
+      TradieMageAssetsWIP1_18: 169348388
+      TradieMageAssetsWIP1_19: -160564231
+      TradieMageAssetsWIP1_2: -4197390388175656682
+      TradieMageAssetsWIP1_20: 1047532633
+      TradieMageAssetsWIP1_21: 1375027366
+      TradieMageAssetsWIP1_22: -595377526
+      TradieMageAssetsWIP1_23: -601103441
+      TradieMageAssetsWIP1_24: 2141161560
+      TradieMageAssetsWIP1_25: 2061632945
+      TradieMageAssetsWIP1_26: -792883209
+      TradieMageAssetsWIP1_27: -995512884
+      TradieMageAssetsWIP1_28: -1583841626
+      TradieMageAssetsWIP1_29: -867155197
+      TradieMageAssetsWIP1_3: -6405420433862838902
+      TradieMageAssetsWIP1_30: 639330683
+      TradieMageAssetsWIP1_31: -1987965877
+      TradieMageAssetsWIP1_32: 543989165
+      TradieMageAssetsWIP1_33: -1438625694
+      TradieMageAssetsWIP1_34: -770116315
+      TradieMageAssetsWIP1_35: -1107532860
+      TradieMageAssetsWIP1_36: 275531770
+      TradieMageAssetsWIP1_37: 223307323
+      TradieMageAssetsWIP1_38: 1081017706
+      TradieMageAssetsWIP1_39: -982760528
+      TradieMageAssetsWIP1_4: 9083533212370313733
+      TradieMageAssetsWIP1_40: 1850960166
+      TradieMageAssetsWIP1_41: 1569836500
+      TradieMageAssetsWIP1_42: -1946397173
+      TradieMageAssetsWIP1_43: 1470002834
+      TradieMageAssetsWIP1_44: -1597159140
+      TradieMageAssetsWIP1_45: 35929169
+      TradieMageAssetsWIP1_46: 459216224
+      TradieMageAssetsWIP1_47: -929745769
+      TradieMageAssetsWIP1_48: 1633469750
+      TradieMageAssetsWIP1_49: -1117165430
+      TradieMageAssetsWIP1_5: 4517250999211743481
+      TradieMageAssetsWIP1_50: -859754287
+      TradieMageAssetsWIP1_51: 756058982
+      TradieMageAssetsWIP1_52: -277045176
+      TradieMageAssetsWIP1_53: -904300543
+      TradieMageAssetsWIP1_54: -1830364544
+      TradieMageAssetsWIP1_55: 751091466
+      TradieMageAssetsWIP1_56: 898782241
+      TradieMageAssetsWIP1_57: -742674180
+      TradieMageAssetsWIP1_58: -277798561
+      TradieMageAssetsWIP1_59: -85475665
+      TradieMageAssetsWIP1_6: 5936968031732258822
+      TradieMageAssetsWIP1_60: -1289244607
+      TradieMageAssetsWIP1_61: -1976201921
+      TradieMageAssetsWIP1_62: -1117617345
+      TradieMageAssetsWIP1_63: 632006570
+      TradieMageAssetsWIP1_64: -1635161252
+      TradieMageAssetsWIP1_65: 1065409439
+      TradieMageAssetsWIP1_66: 824397097
+      TradieMageAssetsWIP1_67: -2069676175
+      TradieMageAssetsWIP1_68: -1212080974
+      TradieMageAssetsWIP1_69: -1856464971
+      TradieMageAssetsWIP1_7: -6044377092022437838
+      TradieMageAssetsWIP1_70: 323670701
+      TradieMageAssetsWIP1_71: 1205339537
+      TradieMageAssetsWIP1_72: 1076682818
+      TradieMageAssetsWIP1_73: 1911544786
+      TradieMageAssetsWIP1_74: 803428369
+      TradieMageAssetsWIP1_75: 562286102
+      TradieMageAssetsWIP1_8: -7608347273235714767
+      TradieMageAssetsWIP1_9: -6753191525815965556
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
