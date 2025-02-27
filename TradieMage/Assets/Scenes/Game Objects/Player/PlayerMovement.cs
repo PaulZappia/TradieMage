@@ -24,6 +24,9 @@ public class PlayerMovement : MonoBehaviour
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
 
+    [Header("Inputs")]
+    public bool isBuilding;
+    public GameObject box;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -36,7 +39,7 @@ public class PlayerMovement : MonoBehaviour
     void Update()
     {
         rigidBody.linearVelocity = new Vector2(horizontalMovement * moveSpeed, rigidBody.linearVelocity.y);
-
+        HandleInputs();
         /*
         if (jumpTimer > 0)
         {
@@ -45,8 +48,23 @@ public class PlayerMovement : MonoBehaviour
         */
         GroundCheck();
 
+        //building
+        if (isBuilding)
+        {
+           GameObject newBox = Instantiate(box);
+            newBox.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            //point = MainCam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, MainCam.nearClipPlane));
+            //    var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        }
 
 
+
+    }
+
+    public void HandleInputs()
+    {
+        isBuilding = Input.GetMouseButtonDown(0);
     }
 
     public void Move(InputAction.CallbackContext context)
@@ -74,6 +92,12 @@ public class PlayerMovement : MonoBehaviour
         }
         
     }
+    /*
+    public void Build(InputAction.CallbackContext context)
+    {
+       print("build");
+
+    }*/
 
     private void GroundCheck()
     {
