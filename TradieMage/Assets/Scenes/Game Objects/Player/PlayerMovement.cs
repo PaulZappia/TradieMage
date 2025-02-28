@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
 using Unity.Android.Types;
+using TMPro;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -23,16 +24,22 @@ public class PlayerMovement : MonoBehaviour
     public Transform groundCheckPosition;
     public Vector2 groundCheckSize = new Vector2(0.5f, 0.05f);
     public LayerMask groundLayer;
+    public LayerMask boxLayer;
 
     [Header("Inputs")]
     public bool isBuilding;
+    public bool isDestroying;
     public GameObject box;
+    public TMP_Text manaPointsDisplay;
 
+    [Header("Mana")]
+    public int mana = 3;
+    public int woodenBoxCost = 1;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        //boxLayer = this.GetComponent<>
     }
 
     // Update is called once per frame
@@ -51,21 +58,67 @@ public class PlayerMovement : MonoBehaviour
         //building
         if (isBuilding)
         {
-           GameObject newBox = Instantiate(box);
-            newBox.transform.position = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-            //point = MainCam.ScreenToWorldPoint(new Vector3(mousePos.x, mousePos.y, MainCam.nearClipPlane));
-            //    var mouseWorldPos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+            BuildBox();
+        }
 
+        //destroy box
+        if (isDestroying)
+        {
+            RecycleBox();
         }
 
 
+
+        UpdateHUD();
 
     }
 
     public void HandleInputs()
     {
-        isBuilding = Input.GetMouseButtonDown(0);
+        isBuilding = Input.GetMouseButtonDown(0); //left Mouse button
+        isDestroying = Input.GetMouseButtonDown(1); //right mouse button
     }
+
+    public void UpdateHUD()
+    {
+        manaPointsDisplay.text = "MANA: " + mana;
+    }
+
+    public void BuildBox()
+    {
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        if (mana >= woodenBoxCost && !Physics2D.OverlapBox(mousePos, new Vector2(1f, 1f), 0, groundLayer))
+        {
+            GameObject newBox = Instantiate(box);
+            
+            mousePos.z = 0f;
+            //mousePos.x = Mathf.RoundToInt(mousePos.x) - 0.5f;
+            //mousePos.y = Mathf.RoundToInt(mousePos.y) - 0.5f;
+            newBox.transform.position = mousePos;
+
+            mana -= woodenBoxCost;
+        }
+        
+    }
+
+    public void RecycleBox()
+    {
+        
+        
+
+        Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+
+        Collider2D newBox = Physics2D.OverlapBox(mousePos, new Vector2(1f, 1f), 0, boxLayer);
+        Debug.Log(newBox);
+        if (newBox != null)
+        {
+            Destroy(newBox.gameObject);
+            mana += woodenBoxCost;
+        }
+    }
+
+
 
     public void Move(InputAction.CallbackContext context)
     {
@@ -101,7 +154,7 @@ public class PlayerMovement : MonoBehaviour
 
     private void GroundCheck()
     {
-        if (Physics2D.OverlapBox(groundCheckPosition.position, groundCheckSize, 0, groundLayer)/* && jumpTimer == 0*/)
+        if (Physics2D.OverlapBox(groundCheckPosition.position, groundCheckSize, 0, groundLayer))
         {
             jumpsRemaining = maxJumps;
 
