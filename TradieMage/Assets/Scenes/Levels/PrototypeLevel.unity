@@ -1168,7 +1168,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: -0.009979248, y: -0.0015258789}
+  m_AnchoredPosition: {x: -0.0099487305, y: -0.0015258789}
   m_SizeDelta: {x: -1636, y: -920}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1608508451
@@ -3871,6 +3871,14 @@ PrefabInstance:
     - target: {fileID: 2783157542417789511, guid: 297fee700b4f124478a784c85ec7eb0c, type: 3}
       propertyPath: m_GravityScale
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783157542417789511, guid: 297fee700b4f124478a784c85ec7eb0c, type: 3}
+      propertyPath: m_SleepingMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2783157542417789511, guid: 297fee700b4f124478a784c85ec7eb0c, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4344050080638281612, guid: 297fee700b4f124478a784c85ec7eb0c, type: 3}
       propertyPath: box
