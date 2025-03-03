@@ -4,6 +4,8 @@ using System.Collections;
 using System.Collections.Generic;
 //using Unity.Android.Types;
 using TMPro;
+using System;
+using NUnit.Framework;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -42,15 +44,34 @@ public class PlayerMovement : MonoBehaviour
     public int mana = 3;
     public int woodenBoxCost = 1;
 
+    [Header("SelectedBox")]
+    public int selectedBox = 0;
+    //public int[] boxArray = 
+    public List<GameObject> boxTypes = new List<GameObject>();
+    public List<string> boxTypeNames = new List<string>();
+
+
+    [Header("HUD")]
+    public TMP_Text selectedBoxHUDText;
+
+
     [Header("Debug")]
     public TMP_Text coords;
     public TMP_Text coordsRound;
+    public TMP_Text coordsPlayer;
+
+
+    //private bool isFacingRight = false;
+
+    
+   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         //boxLayer = this.GetComponent<>
         mouseScript = mouseObject.GetComponent<Mouse>();
+        
     }
 
     // Update is called once per frame
@@ -78,6 +99,23 @@ public class PlayerMovement : MonoBehaviour
             RecycleBox();
         }
 
+        //cycle boxes
+        if (Input.GetKeyDown(KeyCode.E))
+        {
+            //Debug.Log(boxTypes.Count);
+            selectedBox++;
+            if(selectedBox >= boxTypes.Count)
+            {
+                selectedBox = 0;
+            }
+        }
+
+
+
+
+        //flip sprite
+        SetFacingDirection(Mathf.Sign(rigidBody.linearVelocity.x));
+        
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RoundMouseCoords();
@@ -108,8 +146,12 @@ public class PlayerMovement : MonoBehaviour
     public void UpdateHUD()
     {
         manaPointsDisplay.text = "MANA: " + mana;
-        coords.text = "X: " + mousePos.x.ToString("F2") + "\n" + "Y: " + mousePos.y.ToString("F2");
-        coordsRound.text = "X: " + mousePosRound.x.ToString() + "\n" + "Y: " + mousePosRound.y.ToString();
+        coords.text = "MouseX: " + mousePos.x.ToString("F2") + "\n" + "MouseY: " + mousePos.y.ToString("F2");
+        coordsRound.text = "MouseRoundX: " + mousePosRound.x.ToString() + "\n" + "MouseRoundY: " + mousePosRound.y.ToString();
+        coordsPlayer.text = "PlayerX: " + gameObject.transform.position.x.ToString() + "\n" + "PlayerY: " + gameObject.transform.position.y.ToString();
+
+        selectedBoxHUDText.text = "BOX: " + boxTypeNames[selectedBox];
+
     }
 
     public void BuildBox()
@@ -134,7 +176,7 @@ public class PlayerMovement : MonoBehaviour
             //Debug.Log("This has Run");
             if (mana >= woodenBoxCost) // && !Physics2D.OverlapBox(mousePosRound, new Vector2(0.01f, 0.01f), 0, groundLayer))
             {
-                GameObject newBox = Instantiate(box);
+                GameObject newBox = Instantiate(boxTypes[selectedBox]);
 
                 //mousePos.z = 0f;
                 //Debug.Log(mousePos.x + " || " + Mathf.Round(mousePos.x));
@@ -212,6 +254,20 @@ public class PlayerMovement : MonoBehaviour
             jumpsRemaining = 0;
         }
     }
+
+    private void SetFacingDirection(float dir)
+    {
+        if(dir != 0)
+        {
+            Vector3 ls = transform.localScale;
+            ls.x = dir;
+            transform.localScale = ls;
+            //this.transform.localScale.x *= -1f;
+        }
+
+    }
+
+
 
     private void OnDrawGizmosSelected()
     {
