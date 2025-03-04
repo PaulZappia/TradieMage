@@ -193,7 +193,7 @@ GameObject:
   - component: {fileID: 6409141578941621815}
   - component: {fileID: 2722746440223076836}
   m_Layer: 7
-  m_Name: BoxWood
+  m_Name: BoxSteel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -259,7 +259,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 5167228247155256966, guid: 0209114c991cca749aa4dbe9ae4e0aee, type: 3}
+  m_Sprite: {fileID: 5167228247155256966, guid: cf11905c57b713f4fbcba78a09800a35, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0

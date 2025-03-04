@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
     [Header("Movement")]
     public float moveSpeed = 5f;
     float horizontalMovement;
+    //bool facingRight = true;
 
     [Header("Jump")]
     public float jumpPower = 10f;
@@ -108,14 +109,26 @@ public class PlayerMovement : MonoBehaviour
             {
                 selectedBox = 0;
             }
+            mouseScript.SetSprite(selectedBox);
+        }
+        if (Input.GetKeyDown(KeyCode.Q))
+        {
+            //Debug.Log(boxTypes.Count);
+            selectedBox--;
+            if (selectedBox < 0)
+            {
+                selectedBox = boxTypes.Count - 1;
+            }
+            mouseScript.SetSprite(selectedBox);
         }
 
 
 
 
         //flip sprite
-        SetFacingDirection(Mathf.Sign(rigidBody.linearVelocity.x));
-        
+        //if (Mathf.Sign(rigidBody.linearVelocity.x) != 0) 
+        //    SetFacingDirection(Mathf.Sign(rigidBody.linearVelocity.x));
+
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RoundMouseCoords();
@@ -125,8 +138,8 @@ public class PlayerMovement : MonoBehaviour
 
     public void HandleInputs()
     {
-        isBuilding = Input.GetMouseButtonDown(0); //left Mouse button
-        isDestroying = Input.GetMouseButtonDown(1); //right mouse button
+        isBuilding = Input.GetMouseButton(0); //left Mouse button
+        isDestroying = Input.GetMouseButton(1); //right mouse button
     }
 
     public void RoundMouseCoords()
@@ -148,7 +161,7 @@ public class PlayerMovement : MonoBehaviour
         manaPointsDisplay.text = "MANA: " + mana;
         coords.text = "MouseX: " + mousePos.x.ToString("F2") + "\n" + "MouseY: " + mousePos.y.ToString("F2");
         coordsRound.text = "MouseRoundX: " + mousePosRound.x.ToString() + "\n" + "MouseRoundY: " + mousePosRound.y.ToString();
-        coordsPlayer.text = "PlayerX: " + gameObject.transform.position.x.ToString() + "\n" + "PlayerY: " + gameObject.transform.position.y.ToString();
+        coordsPlayer.text = "PlayerX: " + gameObject.transform.position.x.ToString("F2") + "\n" + "PlayerY: " + gameObject.transform.position.y.ToString("F2");
 
         selectedBoxHUDText.text = "BOX: " + boxTypeNames[selectedBox];
 
@@ -157,6 +170,15 @@ public class PlayerMovement : MonoBehaviour
     public void BuildBox()
     {
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+
+        // CHANGE CODE TO BE:
+        // 1. Grab Current Mouse Coords
+        // 2. Check if those Coords are in range
+        // a. If not, return function.
+        // b. If so, continue and place block at Saved Coords.
+
+        Vector3 currentMousePos = mousePosRound;
+
         if (mouseScript.inRange == false)
         {
             return;
@@ -183,7 +205,7 @@ public class PlayerMovement : MonoBehaviour
                 //mousePos.x = Mathf.Round(mousePos.x); //- 0.5f;
                 //Debug.Log(mousePos.y + " || " + Mathf.Round(mousePos.y));
                 //mousePos.y = Mathf.Round(mousePos.y); //- 0.5f;
-                newBox.transform.position = mousePosRound;
+                newBox.transform.position = currentMousePos; // changed from directly using mouse pos to avoid illegal block placement
 
                 mana -= woodenBoxCost;
             }
@@ -212,6 +234,11 @@ public class PlayerMovement : MonoBehaviour
     public void Move(InputAction.CallbackContext context)
     {
         horizontalMovement = context.ReadValue<Vector2>().x;
+        if (horizontalMovement != 0)
+        {
+            SetFacingDirection(horizontalMovement);
+        }
+        //Debug.Log(horizontalMovement);
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -260,9 +287,21 @@ public class PlayerMovement : MonoBehaviour
         if(dir != 0)
         {
             Vector3 ls = transform.localScale;
-            ls.x = dir;
+            if (dir == 1f)
+            {
+                ls.x = 1;
+            } 
+            else if (dir == -1f)
+            {
+                ls.x = -1;
+            }
+            
             transform.localScale = ls;
             //this.transform.localScale.x *= -1f;
+        }
+        else 
+        { 
+            return; 
         }
 
     }

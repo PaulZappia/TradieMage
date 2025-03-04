@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using UnityEngine;
 
 public class Mouse : MonoBehaviour
@@ -7,13 +8,17 @@ public class Mouse : MonoBehaviour
     public GameObject rangeObject;
     Collider2D rangeCollider;
     public SpriteRenderer spriteRenderer;
+    public SpriteRenderer highlightRenderer;
     public Color defaultColour;
     public bool inRange = false;
+
+    public List<Sprite> blockSprites = new List<Sprite>();
     
     void Start()
     {
         rangeCollider = rangeObject.GetComponent<Collider2D>();
         defaultColour = spriteRenderer.color;
+        SetSprite(0);
         //spriteRenderer = GetComponentInChildren<SpriteRenderer>();
     }
 
@@ -52,12 +57,19 @@ public class Mouse : MonoBehaviour
     {
         if (isinRange) {
             spriteRenderer.color = defaultColour;
+            highlightRenderer.color = defaultColour;
         } 
         else
         {
             spriteRenderer.color = Color.red;
+            highlightRenderer.color = Color.red;
         }
         inRange = isinRange;
+    }
+
+    public void SetSprite(int index)
+    {
+        spriteRenderer.sprite = blockSprites[index];
     }
 
 }
