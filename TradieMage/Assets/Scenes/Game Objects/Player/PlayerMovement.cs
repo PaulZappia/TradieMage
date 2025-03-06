@@ -40,6 +40,7 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 mousePosRound;
     public GameObject mouseObject;
     public Mouse mouseScript;
+    public float buildRange = 5;
 
     [Header("Mana")]
     public int mana = 3;
@@ -88,17 +89,7 @@ public class PlayerMovement : MonoBehaviour
         */
         GroundCheck();
 
-        //building
-        if (isBuilding)
-        {
-            BuildBox();
-        }
-
-        //destroy box
-        if (isDestroying)
-        {
-            RecycleBox();
-        }
+        
 
         //cycle boxes
         if (Input.GetKeyDown(KeyCode.E))
@@ -135,6 +126,25 @@ public class PlayerMovement : MonoBehaviour
         UpdateHUD();
 
     }
+
+    public void FixedUpdate()
+    {
+        HandleInputs();
+        
+        //building
+        if (isBuilding)
+        {
+            BuildBox();
+        }
+
+        //destroy box
+        if (isDestroying)
+        {
+            RecycleBox();
+        }
+    }
+
+
 
     public void HandleInputs()
     {
@@ -178,16 +188,24 @@ public class PlayerMovement : MonoBehaviour
         // b. If so, continue and place block at Saved Coords.
 
         Vector3 currentMousePos = mousePosRound;
-
+        /*
         if (mouseScript.inRange == false)
         {
             return;
         }
+        */
+        float dist = Vector3.Distance(this.transform.position, currentMousePos);
+        if(dist > buildRange)
+        {
+            return;
+        }
 
-        Collider2D existingBox = Physics2D.OverlapBox(mouseObject.transform.position, new Vector2(0.01f, 0.01f), 0, groundLayer);
+
+        Collider2D existingBox = Physics2D.OverlapBox(currentMousePos, new Vector2(0.01f, 0.01f), 0, groundLayer);
         //Collider2D playerInside = Physics2D.OverlapBox(mouseObject.transform.position, new Vector2(0.01f, 0.01f), 0, 0);
         //Debug.Log(playerInside);
-        //Debug.Log(existingBox);
+        Debug.Log(existingBox);
+        //Debug.Log();
 
         if (existingBox != null)
         {
