@@ -38,6 +38,12 @@ public class Mouse : MonoBehaviour
         {
             SetRange(false);
         }
+
+
+
+
+
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
