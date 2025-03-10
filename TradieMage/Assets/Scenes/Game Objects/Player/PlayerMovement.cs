@@ -130,7 +130,7 @@ public class PlayerMovement : MonoBehaviour
     public void FixedUpdate()
     {
         HandleInputs();
-        
+        RoundMouseCoords();
         //building
         if (isBuilding)
         {
@@ -204,11 +204,12 @@ public class PlayerMovement : MonoBehaviour
         Collider2D existingBox = Physics2D.OverlapBox(currentMousePos, new Vector2(0.01f, 0.01f), 0, groundLayer);
         //Collider2D playerInside = Physics2D.OverlapBox(mouseObject.transform.position, new Vector2(0.01f, 0.01f), 0, 0);
         //Debug.Log(playerInside);
-        Debug.Log(existingBox);
+        
         //Debug.Log();
 
         if (existingBox != null)
         {
+            Debug.Log("canceled box");
             return;
         } 
         else
@@ -244,7 +245,7 @@ public class PlayerMovement : MonoBehaviour
         //Debug.Log(newBox);
         if (selectedBox != null)
         {
-            Destroy(selectedBox.gameObject);
+            Destroy(selectedBox.gameObject.transform.parent.gameObject);
             mana += woodenBoxCost;
         }
     }

@@ -47,7 +47,7 @@ GameObject:
   - component: {fileID: 9119673315954411606}
   m_Layer: 0
   m_Name: Player
-  m_TagString: Untagged
+  m_TagString: Player
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -213,12 +213,15 @@ MonoBehaviour:
   mousePosRound: {x: 0, y: 0, z: 0}
   mouseObject: {fileID: 0}
   mouseScript: {fileID: 0}
+  buildRange: 50
   mana: 50
   woodenBoxCost: 1
   selectedBox: 0
   boxTypes:
   - {fileID: 7334484627588262577, guid: d27965e53403e1646821108e0c4ed8dd, type: 3}
   - {fileID: 7334484627588262577, guid: 591acc52c02abe642bd431de2d3280ec, type: 3}
+  boxTypeNames: []
+  selectedBoxHUDText: {fileID: 0}
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
   coordsPlayer: {fileID: 0}
