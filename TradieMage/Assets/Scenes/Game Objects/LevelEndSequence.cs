@@ -3,6 +3,7 @@ using UnityEngine.SceneManagement;
 
 public class LevelEndSequence : MonoBehaviour
 {
+    public string levelName;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -19,7 +20,7 @@ public class LevelEndSequence : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene(levelName);
         }
     }
 
