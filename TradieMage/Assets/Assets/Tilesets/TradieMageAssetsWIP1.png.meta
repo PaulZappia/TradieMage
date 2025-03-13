@@ -1859,6 +1859,28 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: TradieMageAssetsWIP1_76
+      rect:
+        serializedVersion: 2
+        x: 16
+        y: 192
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b272aa890380a554589168fd383a7bcc
+      internalID: 1505913757
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     customData: 
     physicsShape: []
@@ -1947,6 +1969,7 @@ TextureImporter:
       TradieMageAssetsWIP1_73: 1911544786
       TradieMageAssetsWIP1_74: 803428369
       TradieMageAssetsWIP1_75: 562286102
+      TradieMageAssetsWIP1_76: 1505913757
       TradieMageAssetsWIP1_8: -7608347273235714767
       TradieMageAssetsWIP1_9: -6753191525815965556
   mipmapLimitGroupName: 
