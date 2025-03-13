@@ -188,17 +188,21 @@ public class PlayerMovement : MonoBehaviour
         // b. If so, continue and place block at Saved Coords.
 
         Vector3 currentMousePos = mousePosRound;
-        /*
+        
         if (mouseScript.inRange == false)
         {
             return;
         }
-        */
+        
+        
+        /// BROKEN HELLSPAWN \/
+        /* 
         float dist = Vector3.Distance(this.transform.position, currentMousePos);
         if(dist > buildRange)
         {
             return;
         }
+        */
 
 
         Collider2D existingBox = Physics2D.OverlapBox(currentMousePos, new Vector2(0.01f, 0.01f), 0, groundLayer);
