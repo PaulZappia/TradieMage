@@ -61,12 +61,14 @@ public class PlayerMovement : MonoBehaviour
     public TMP_Text coords;
     public TMP_Text coordsRound;
     public TMP_Text coordsPlayer;
+    public TMP_Text raycastDebugText;
+
+    [Header("Unsorted")]
+    public RaycastHit2D raycastHit;
+    public Vector2 mouseDirection;
 
 
     //private bool isFacingRight = false;
-
-    
-   
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -142,9 +144,24 @@ public class PlayerMovement : MonoBehaviour
         {
             RecycleBox();
         }
+
+
     }
 
+    public void MouseRaycast()
+    {
+        mouseDirection = (transform.position-mousePosRound).normalized;
+        raycastHit = Physics2D.Raycast(transform.position, mouseDirection, buildRange, groundLayer);
 
+        if (raycastHit)
+        {
+            //Debug.Log(raycastHit.collider);
+            raycastDebugText.text = raycastHit.ToString();
+        }
+
+        
+
+    }
 
     public void HandleInputs()
     {
