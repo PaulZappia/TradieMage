@@ -7,6 +7,7 @@ public class MovingPlatform : MonoBehaviour
     public Transform pointA;
     public Transform pointB;
     public float moveSpeed = 2f;
+    public bool isActive = true;//{ get; set; } = true;
 
     private Vector3 nextPosition;
 
@@ -18,7 +19,11 @@ public class MovingPlatform : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        transform.position = Vector3.MoveTowards(transform.position, nextPosition, moveSpeed * Time.deltaTime);
+        if (isActive)
+        {
+            transform.position = Vector3.MoveTowards(transform.position, nextPosition, moveSpeed * Time.deltaTime);
+        }
+       
 
         if(transform.position == nextPosition)
         {
@@ -42,6 +47,10 @@ public class MovingPlatform : MonoBehaviour
             collision.gameObject.transform.parent = null;
         }
     }
+
+    
+
+
 
 
 }
