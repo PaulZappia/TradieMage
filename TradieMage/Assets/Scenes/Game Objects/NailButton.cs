@@ -5,12 +5,16 @@ public class NailButton : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     private bool isPressed = false;
+    public SpriteRenderer buttonSprite;
+    public Sprite buttonActive;
+    public Sprite buttonInactive;
 
     public MovingPlatform connectedObject1;
+    //public GameObject connectedObject1;
 
     void Start()
     {
-        
+        buttonSprite = GetComponentInChildren<SpriteRenderer>();
     }
 
     // Update is called once per frame
@@ -26,7 +30,8 @@ public class NailButton : MonoBehaviour
         {
             //Debug.Log("yay");
             isPressed = true;
-            if(connectedObject1 != null)
+            buttonSprite.sprite.
+            if (connectedObject1 != null)
             {
                 connectedObject1.isActive = true;
             }
