@@ -30,7 +30,7 @@ public class NailButton : MonoBehaviour
         {
             //Debug.Log("yay");
             isPressed = true;
-            buttonSprite.sprite.
+            //buttonSprite.sprite.///////////////////////////////////////////
             if (connectedObject1 != null)
             {
                 connectedObject1.isActive = true;
