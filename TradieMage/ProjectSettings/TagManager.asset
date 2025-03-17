@@ -7,6 +7,7 @@ TagManager:
   - BoxTag
   - BuildRange
   - PlayerRadius
+  - SwitchingBlock
   layers:
   - Default
   - TransparentFX

@@ -881,6 +881,54 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 6196900678789221055, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
   m_PrefabInstance: {fileID: 1294781080998573950}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1587089199
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1587089201}
+  - component: {fileID: 1587089200}
+  m_Layer: 0
+  m_Name: RedSwitchController
+  m_TagString: Untagged
+  m_Icon: {fileID: 7174288486110832750, guid: 0000000000000000d000000000000000, type: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1587089200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587089199}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eea010300190e4c4b9e8c3e58d6d4128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  blockColours:
+  - RedSwitchingBlock
+  - BlueSwitchingBlock
+  - GreenSwitchingBlock
+--- !u!4 &1587089201
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1587089199}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 1.5534384, y: -0.49938178, z: 103.85927}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1783848602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15165,3 +15213,4 @@ SceneRoots:
   - {fileID: 438650384}
   - {fileID: 989979312}
   - {fileID: 8340846333700257779}
+  - {fileID: 1587089201}
