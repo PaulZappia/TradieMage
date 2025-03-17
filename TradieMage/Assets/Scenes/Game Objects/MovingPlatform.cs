@@ -1,13 +1,13 @@
 using UnityEngine;
 
-public class MovingPlatform : MonoBehaviour
+public class MovingPlatform : ToggleObject
 {
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public Transform pointA;
     public Transform pointB;
     public float moveSpeed = 2f;
-    public bool isActive = true;//{ get; set; } = true;
+    //public bool isActive = true;//{ get; set; } = true;
 
     private Vector3 nextPosition;
 

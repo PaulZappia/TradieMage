@@ -9,7 +9,7 @@ public class NailButton : MonoBehaviour
     public Sprite buttonActive;
     public Sprite buttonInactive;
 
-    public MovingPlatform connectedObject1;
+    public ToggleObject connectedObject1;
     //public GameObject connectedObject1;
 
     void Start()
