@@ -51,6 +51,8 @@ public class PlayerMovement : MonoBehaviour
     [Header("Mana")]
     public int mana = 3;
     public int woodenBoxCost = 1;
+    public int metalBox = 3;
+    public List<int> boxCosts = new List<int>();
 
     [Header("SelectedBox")]
     public int selectedBox = 0;
@@ -220,14 +222,10 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 currentMousePos = mousePosRound;
         
-        
         if (mouseScript.inRange == false)
         {
             return;
         }
-
-
-
 
         /// BROKEN HELLSPAWN \/
         /* 
@@ -238,22 +236,20 @@ public class PlayerMovement : MonoBehaviour
         }
         */
 
-        
         Collider2D existingBox = Physics2D.OverlapBox(currentMousePos+ mouseBuildCheckOffset, new Vector2(0.01f, 0.01f), 0, groundLayer);
         //Collider2D playerInside = Physics2D.OverlapBox(mouseObject.transform.position, new Vector2(0.01f, 0.01f), 0, 0);
         //Debug.Log(playerInside);
-        
         //Debug.Log();
 
         if (existingBox != null)
         {
-            Debug.Log("canceled box");
+            //Debug.Log("canceled box");
             return;
         } 
         else
         {
             //Debug.Log("This has Run");
-            if (mana >= woodenBoxCost) // && !Physics2D.OverlapBox(mousePosRound, new Vector2(0.01f, 0.01f), 0, groundLayer))
+            if (mana >= boxCosts[selectedBox]) // && !Physics2D.OverlapBox(mousePosRound, new Vector2(0.01f, 0.01f), 0, groundLayer))
             {
                 GameObject newBox = Instantiate(boxTypes[selectedBox]);
 
@@ -263,8 +259,9 @@ public class PlayerMovement : MonoBehaviour
                 //Debug.Log(mousePos.y + " || " + Mathf.Round(mousePos.y));
                 //mousePos.y = Mathf.Round(mousePos.y); //- 0.5f;
                 newBox.transform.position = currentMousePos; // changed from directly using mouse pos to avoid illegal block placement
-
-                mana -= woodenBoxCost;
+                newBox.GetComponentInChildren<Box>().manaCost = boxCosts[selectedBox];
+                mana -= boxCosts[selectedBox];
+                Debug.Log(boxCosts[selectedBox]);
             }
         }
     }
@@ -282,13 +279,13 @@ public class PlayerMovement : MonoBehaviour
 
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //
-        Collider2D selectedBox = Physics2D.OverlapBox(currentMousePos + mouseBuildCheckOffset, new Vector2(0.01f, 0.01f), 0, boxLayer);
+        Collider2D overlappingBox = Physics2D.OverlapBox(currentMousePos + mouseBuildCheckOffset, new Vector2(0.01f, 0.01f), 0, boxLayer);
 
         //Debug.Log(newBox);
-        if (selectedBox != null)
+        if (overlappingBox != null)
         {
-            Destroy(selectedBox.gameObject.transform.parent.gameObject);
-            mana += woodenBoxCost;
+            Destroy(overlappingBox.gameObject.transform.parent.gameObject);
+            mana += overlappingBox.GetComponent<Box>().manaCost;
         }
     }
 

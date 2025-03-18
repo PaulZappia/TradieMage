@@ -213,15 +213,23 @@ MonoBehaviour:
   mousePosRound: {x: 0, y: 0, z: 0}
   mouseObject: {fileID: 0}
   mouseScript: {fileID: 0}
+  buildRadiusCollider: {fileID: 0}
   buildRange: 50
   isRangeExtended: 0
+  buildRadius: 4.5
+  buildRadiusExtended: 13.5
+  mouseBuildCheckOffset: {x: 0.5, y: -0.5, z: 0}
   mana: 50
   woodenBoxCost: 1
+  metalBox: 3
+  boxCosts: 0300000001000000
   selectedBox: 0
   boxTypes:
   - {fileID: 7334484627588262577, guid: d27965e53403e1646821108e0c4ed8dd, type: 3}
   - {fileID: 7334484627588262577, guid: 591acc52c02abe642bd431de2d3280ec, type: 3}
-  boxTypeNames: []
+  boxTypeNames:
+  - Metal
+  - Wooden
   selectedBoxHUDText: {fileID: 0}
   coords: {fileID: 0}
   coordsRound: {fileID: 0}

@@ -1,7 +1,7 @@
 using UnityEngine;
 using UnityEngine.EventSystems;
 
-public class Box : MonoBehaviour, IPointerClickHandler
+public class Box : MonoBehaviour//, IPointerClickHandler
 {
     PlayerMovement player;
     public int manaCost = 1;
@@ -16,11 +16,13 @@ public class Box : MonoBehaviour, IPointerClickHandler
     {
         //Debug.Log("HI");
     }
-
+    /*
     public void OnPointerClick(PointerEventData eventData)
     {
         if (eventData.button == PointerEventData.InputButton.Right)
             player.mana += manaCost;
             Destroy(this);
     }
+    */
+
 }
