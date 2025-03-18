@@ -214,6 +214,7 @@ MonoBehaviour:
   mouseObject: {fileID: 0}
   mouseScript: {fileID: 0}
   buildRange: 50
+  isRangeExtended: 0
   mana: 50
   woodenBoxCost: 1
   selectedBox: 0
@@ -225,6 +226,8 @@ MonoBehaviour:
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
   coordsPlayer: {fileID: 0}
+  raycastDebugText: {fileID: 0}
+  mouseDirection: {x: 0, y: 0}
 --- !u!114 &9119673315954411606
 MonoBehaviour:
   m_ObjectHideFlags: 0

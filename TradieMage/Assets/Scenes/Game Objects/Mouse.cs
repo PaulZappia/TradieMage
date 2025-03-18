@@ -11,6 +11,7 @@ public class Mouse : MonoBehaviour
     public SpriteRenderer highlightRenderer;
     public Color defaultColour;
     public bool inRange = false;
+    //public bool isRangeExtended = false;
 
     public List<Sprite> blockSprites = new List<Sprite>();
     

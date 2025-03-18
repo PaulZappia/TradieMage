@@ -40,7 +40,12 @@ public class PlayerMovement : MonoBehaviour
     public Vector3 mousePosRound;
     public GameObject mouseObject;
     public Mouse mouseScript;
+    public GameObject buildRadiusCollider;
     public float buildRange = 5;
+    public bool isRangeExtended = false;
+    public float buildRadius = 4.5f;
+    public float buildRadiusExtended = 13.5f;
+
 
     [Header("Mana")]
     public int mana = 3;
@@ -75,7 +80,8 @@ public class PlayerMovement : MonoBehaviour
     {
         //boxLayer = this.GetComponent<>
         mouseScript = mouseObject.GetComponent<Mouse>();
-        
+        setBuildRadiusExtended(isRangeExtended);
+
     }
 
     // Update is called once per frame
@@ -151,6 +157,13 @@ public class PlayerMovement : MonoBehaviour
     public void MouseRaycast()
     {
         mouseDirection = (transform.position-mousePosRound).normalized;
+        /*
+        float modifiedBuildRange = buildRange;
+        if (isRangeExtended)
+        {
+            modifiedBuildRange *= buildRangeMultiplier;
+        }
+        */
         raycastHit = Physics2D.Raycast(transform.position, mouseDirection, buildRange, groundLayer);
 
         if (raycastHit)
@@ -206,10 +219,13 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 currentMousePos = mousePosRound;
         
+        
         if (mouseScript.inRange == false)
         {
             return;
         }
+        
+        
         
         
         /// BROKEN HELLSPAWN \/
@@ -230,7 +246,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (existingBox != null)
         {
-            Debug.Log("canceled box");
+            //Debug.Log("canceled box");
             return;
         } 
         else
@@ -254,10 +270,12 @@ public class PlayerMovement : MonoBehaviour
 
     public void RecycleBox()
     {
+        
         if (mouseScript.inRange == false)
         {
             return;
         }
+        
 
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //
@@ -346,7 +364,19 @@ public class PlayerMovement : MonoBehaviour
 
     }
 
-
+    public void setBuildRadiusExtended(bool extendned)
+    {
+        if (extendned)
+        {
+            buildRadiusCollider.transform.GetComponent<CircleCollider2D>().radius = buildRadiusExtended;
+            isRangeExtended = true;
+        }
+        else
+        {
+            buildRadiusCollider.transform.GetComponent<CircleCollider2D>().radius = buildRadius;
+            isRangeExtended = false;
+        }
+    }
 
     private void OnDrawGizmosSelected()
     {
