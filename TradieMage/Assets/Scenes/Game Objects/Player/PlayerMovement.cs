@@ -6,6 +6,7 @@ using System.Collections.Generic;
 using TMPro;
 using System;
 using NUnit.Framework;
+using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -45,7 +46,7 @@ public class PlayerMovement : MonoBehaviour
     public bool isRangeExtended = false;
     public float buildRadius = 4.5f;
     public float buildRadiusExtended = 13.5f;
-
+    public Vector3 mouseBuildCheckOffset = new Vector3(0.5f, -0.5f, 0f);
 
     [Header("Mana")]
     public int mana = 3;
@@ -224,10 +225,10 @@ public class PlayerMovement : MonoBehaviour
         {
             return;
         }
-        
-        
-        
-        
+
+
+
+
         /// BROKEN HELLSPAWN \/
         /* 
         float dist = Vector3.Distance(this.transform.position, currentMousePos);
@@ -237,8 +238,8 @@ public class PlayerMovement : MonoBehaviour
         }
         */
 
-
-        Collider2D existingBox = Physics2D.OverlapBox(currentMousePos, new Vector2(0.01f, 0.01f), 0, groundLayer);
+        
+        Collider2D existingBox = Physics2D.OverlapBox(currentMousePos+ mouseBuildCheckOffset, new Vector2(0.01f, 0.01f), 0, groundLayer);
         //Collider2D playerInside = Physics2D.OverlapBox(mouseObject.transform.position, new Vector2(0.01f, 0.01f), 0, 0);
         //Debug.Log(playerInside);
         
@@ -246,7 +247,7 @@ public class PlayerMovement : MonoBehaviour
 
         if (existingBox != null)
         {
-            //Debug.Log("canceled box");
+            Debug.Log("canceled box");
             return;
         } 
         else
@@ -270,7 +271,9 @@ public class PlayerMovement : MonoBehaviour
 
     public void RecycleBox()
     {
-        
+        Vector3 currentMousePos = mousePosRound;
+
+
         if (mouseScript.inRange == false)
         {
             return;
@@ -279,7 +282,7 @@ public class PlayerMovement : MonoBehaviour
 
         //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         //
-        Collider2D selectedBox = Physics2D.OverlapBox(mouseObject.transform.position, new Vector2(0.01f, 0.01f), 0, boxLayer);
+        Collider2D selectedBox = Physics2D.OverlapBox(currentMousePos + mouseBuildCheckOffset, new Vector2(0.01f, 0.01f), 0, boxLayer);
 
         //Debug.Log(newBox);
         if (selectedBox != null)
@@ -378,10 +381,13 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
-    private void OnDrawGizmosSelected()
+    private void OnDrawGizmos()
     {
         //Ground checker
         Gizmos.DrawWireCube(groundCheckPosition.position, groundCheckSize);
+        Gizmos.DrawCube(mousePosRound+ new Vector3(0.5f, -0.5f, 0f), new Vector3(0.1f, 0.1f, 0.01f));//mouse block check
+        Gizmos.DrawCube(mousePos, new Vector3(0.2f, 0.2f, 0.01f));//mouse block check
+        Gizmos.DrawWireCube(transform.position, new Vector3(0.01f, 0.01f, 0.01f));//mouse block check
     }
 
 
