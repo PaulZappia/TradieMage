@@ -50,8 +50,8 @@ public class PlayerMovement : MonoBehaviour
 
     [Header("Mana")]
     public int mana = 3;
-    public int woodenBoxCost = 1;
-    public int metalBox = 3;
+    //public int woodenBoxCost = 1;
+    //public int metalBox = 3;
     public List<int> boxCosts = new List<int>();
 
     [Header("SelectedBox")]
