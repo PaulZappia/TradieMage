@@ -20,7 +20,7 @@ public class RangeExtender : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             collision.transform.GetComponentInChildren<PlayerMovement>().setBuildRadiusExtended(true);
-            //Debug.Log("i'm in");
+            Debug.Log("i'm in");
         }
     }
 
@@ -28,8 +28,12 @@ public class RangeExtender : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.transform.GetComponentInChildren<PlayerMovement>().setBuildRadiusExtended(false);
-            //Debug.Log("i'm out");
+            if (!GetComponent<BoxCollider2D>().IsTouching(collision))
+            {
+                collision.transform.GetComponentInChildren<PlayerMovement>().setBuildRadiusExtended(false);
+                Debug.Log("i'm out");
+            }
+            
         }
     }
 
