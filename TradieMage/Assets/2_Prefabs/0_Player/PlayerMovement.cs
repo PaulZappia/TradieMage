@@ -260,6 +260,7 @@ public class PlayerMovement : MonoBehaviour
                 //mousePos.y = Mathf.Round(mousePos.y); //- 0.5f;
                 newBox.transform.position = currentMousePos; // changed from directly using mouse pos to avoid illegal block placement
                 newBox.GetComponentInChildren<Box>().manaCost = boxCosts[selectedBox];
+                newBox.GetComponentInChildren<ParticleSystem>().Play();
                 mana -= boxCosts[selectedBox];
                 //Debug.Log(boxCosts[selectedBox]);
             }
