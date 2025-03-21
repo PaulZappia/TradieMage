@@ -37,7 +37,7 @@ public class LevelEndSequence : MonoBehaviour
         if (collision.CompareTag("Player"))
         {
             isLevelFinished = true;
-            //ParticleSystem.Play();
+            GetComponentInChildren<ParticleSystem>().Play();
         }
     }
 
