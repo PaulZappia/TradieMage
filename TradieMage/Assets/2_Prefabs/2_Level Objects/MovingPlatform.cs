@@ -38,11 +38,21 @@ public class MovingPlatform : ToggleObject
         {
             collision.gameObject.transform.parent = transform;
         }
+        if (collision.gameObject.CompareTag("BoxTag"))
+        {
+            Debug.Log(collision);
+            collision.gameObject.transform.parent = transform;
+
+        }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("BoxTag"))
+        {
+            collision.gameObject.transform.parent = null;
+        }
+        if (collision.gameObject.CompareTag("BoxTag"))
         {
             collision.gameObject.transform.parent = null;
         }
