@@ -38,12 +38,14 @@ public class MovingPlatform : ToggleObject
         {
             collision.gameObject.transform.parent = transform;
         }
-        if (collision.gameObject.CompareTag("BoxTag"))
+        if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
         {
-            Debug.Log(collision);
+            
+            Debug.Log("Box");
             collision.gameObject.transform.parent = transform;
 
         }
+        Debug.Log(collision.gameObject.GetComponentInChildren<BoxCollider2D>().ToString());
     }
 
     private void OnCollisionExit2D(Collision2D collision)
@@ -52,7 +54,7 @@ public class MovingPlatform : ToggleObject
         {
             collision.gameObject.transform.parent = null;
         }
-        if (collision.gameObject.CompareTag("BoxTag"))
+        if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
         {
             collision.gameObject.transform.parent = null;
         }
