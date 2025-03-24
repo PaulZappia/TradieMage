@@ -6,7 +6,7 @@ public class MovingPlatform : ToggleObject
 
     public Transform pointA;
     public Transform pointB;
-    public float moveSpeed = 2f;
+    public float moveSpeed = 1f;
     //public bool isActive = true;//{ get; set; } = true;
 
     private Vector3 nextPosition;
@@ -38,11 +38,23 @@ public class MovingPlatform : ToggleObject
         {
             collision.gameObject.transform.parent = transform;
         }
+        if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
+        {
+            
+            //Debug.Log("Box");
+            collision.gameObject.transform.parent = transform;
+
+        }
+        //Debug.Log(collision.gameObject.GetComponentInChildren<BoxCollider2D>().ToString());
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("BoxTag"))
+        {
+            collision.gameObject.transform.parent = null;
+        }
+        if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
         {
             collision.gameObject.transform.parent = null;
         }
