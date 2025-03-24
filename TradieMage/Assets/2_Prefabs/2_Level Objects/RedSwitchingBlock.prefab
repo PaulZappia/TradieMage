@@ -157,6 +157,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 8535648388610594263}
+  - component: {fileID: 5441628539836158217}
   m_Layer: 0
   m_Name: RedSwitchingBlock
   m_TagString: SwitchingBlock
@@ -180,6 +181,25 @@ Transform:
   - {fileID: 3027482558785000546}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &5441628539836158217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7334484627588262577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 46fc774645ad77943864b9257e35e26b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isActive: 1
+  blockColour: 0
+  sprites:
+  - {fileID: 1879204006, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
+  - {fileID: 1226019552, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
+  spriteRenderer: {fileID: 0}
+  groundObject: {fileID: 0}
 --- !u!1 &9021927719693405632
 GameObject:
   m_ObjectHideFlags: 0
@@ -191,7 +211,6 @@ GameObject:
   - component: {fileID: 3027482558785000546}
   - component: {fileID: 1144577237521857439}
   - component: {fileID: 6409141578941621815}
-  - component: {fileID: 8332339126557220911}
   m_Layer: 7
   m_Name: RedSwitchingBlockObject
   m_TagString: SwitchingBlock
@@ -316,18 +335,3 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &8332339126557220911
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9021927719693405632}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 46fc774645ad77943864b9257e35e26b, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sprites:
-  - {fileID: 1879204006, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
-  - {fileID: 1226019552, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
