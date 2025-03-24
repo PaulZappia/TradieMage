@@ -6,7 +6,7 @@ public class MovingPlatform : ToggleObject
 
     public Transform pointA;
     public Transform pointB;
-    public float moveSpeed = 2f;
+    public float moveSpeed = 1f;
     //public bool isActive = true;//{ get; set; } = true;
 
     private Vector3 nextPosition;
