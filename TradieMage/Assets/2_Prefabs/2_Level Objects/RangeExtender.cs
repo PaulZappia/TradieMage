@@ -19,7 +19,7 @@ public class RangeExtender : MonoBehaviour
     {
         if (collision.CompareTag("Player"))
         {
-            collision.transform.GetComponentInChildren<PlayerMovement>().setBuildRadiusExtended(true);
+            collision.transform.GetComponentInChildren<PlayerBuild>().setBuildRadiusExtended(true);
             Debug.Log("i'm in");
         }
     }
@@ -30,7 +30,7 @@ public class RangeExtender : MonoBehaviour
         {
             if (!GetComponent<BoxCollider2D>().IsTouching(collision))
             {
-                collision.transform.GetComponentInChildren<PlayerMovement>().setBuildRadiusExtended(false);
+                collision.transform.GetComponentInChildren<PlayerBuild>().setBuildRadiusExtended(false);
                 Debug.Log("i'm out");
             }
             

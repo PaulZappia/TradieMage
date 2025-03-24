@@ -41,11 +41,11 @@ public class MovingPlatform : ToggleObject
         if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
         {
             
-            Debug.Log("Box");
+            //Debug.Log("Box");
             collision.gameObject.transform.parent = transform;
 
         }
-        Debug.Log(collision.gameObject.GetComponentInChildren<BoxCollider2D>().ToString());
+        //Debug.Log(collision.gameObject.GetComponentInChildren<BoxCollider2D>().ToString());
     }
 
     private void OnCollisionExit2D(Collision2D collision)

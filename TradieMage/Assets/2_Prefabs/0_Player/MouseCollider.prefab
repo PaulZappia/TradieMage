@@ -176,8 +176,8 @@ MonoBehaviour:
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   inRange: 0
   blockSprites:
-  - {fileID: 5167228247155256966, guid: cf11905c57b713f4fbcba78a09800a35, type: 3}
   - {fileID: 5167228247155256966, guid: 0209114c991cca749aa4dbe9ae4e0aee, type: 3}
+  - {fileID: 5167228247155256966, guid: cf11905c57b713f4fbcba78a09800a35, type: 3}
 --- !u!1 &9063044341227039952
 GameObject:
   m_ObjectHideFlags: 0
