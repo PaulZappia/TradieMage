@@ -46,6 +46,7 @@ GameObject:
   - component: {fileID: 876230760992256056}
   - component: {fileID: 9119673315954411606}
   - component: {fileID: 289927665378079086}
+  - component: {fileID: -4164386452947602624}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -400,6 +401,18 @@ MonoBehaviour:
   coordsPlayer: {fileID: 0}
   raycastDebugText: {fileID: 0}
   mouseDirection: {x: 0, y: 0}
+--- !u!114 &-4164386452947602624
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116782757139063455}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 24e0e4d156b898440883d463128de9ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6196900678789221055
 GameObject:
   m_ObjectHideFlags: 0
