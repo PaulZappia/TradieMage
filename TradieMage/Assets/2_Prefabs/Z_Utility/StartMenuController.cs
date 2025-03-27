@@ -3,9 +3,11 @@ using UnityEngine.SceneManagement;
 
 public class StartMenuController : MonoBehaviour
 {
+    public string StartLevel = "TestLevel1";
+
    public void OnStartClick()
     {
-        SceneManager.LoadScene("TestLevel1"); //load first level here or intro cutscene
+        SceneManager.LoadScene(StartLevel); //load first level here or intro cutscene
     }
 
     public  void OnClickExit()
