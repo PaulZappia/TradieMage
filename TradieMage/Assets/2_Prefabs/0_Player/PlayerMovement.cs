@@ -101,6 +101,10 @@ public class PlayerMovement : MonoBehaviour
                 rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocityX, jumpPower);
                 jumpsRemaining--;
                 //jumpTimer = jumpTimerMax;
+
+                //play sfx
+
+
             }
             //onrelease jump button
             else if (context.canceled)
@@ -108,6 +112,8 @@ public class PlayerMovement : MonoBehaviour
                 //cancel jump, for small jumps
                 rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, rigidBody.linearVelocityY * 0.5f);
             }
+
+
         }
         
     }
