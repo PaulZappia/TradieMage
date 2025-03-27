@@ -44,7 +44,7 @@ GameObject:
   - component: {fileID: 4551856184047913112}
   - component: {fileID: 6105040313413754561}
   - component: {fileID: 5778173863565140885}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: TeleporterSprite
   m_TagString: Teleporter
   m_Icon: {fileID: 0}

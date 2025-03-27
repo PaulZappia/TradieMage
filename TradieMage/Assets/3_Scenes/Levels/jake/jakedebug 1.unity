@@ -343,7 +343,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 9.133333
+  orthographic size: 7.714286
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -747,7 +747,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 4
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_LocalPosition.y
@@ -17741,6 +17741,10 @@ PrefabInstance:
     - target: {fileID: 8427145725719892771, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_Name
       value: Teleporter1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8427145725719892771, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: m_Layer
+      value: 8
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

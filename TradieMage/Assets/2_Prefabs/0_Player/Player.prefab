@@ -413,6 +413,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24e0e4d156b898440883d463128de9ea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  TeleportLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  TeleportCollider: {x: 0.5, y: 0.5}
 --- !u!1 &6196900678789221055
 GameObject:
   m_ObjectHideFlags: 0
