@@ -6,18 +6,22 @@ public class Mouse : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
 
     public GameObject rangeObject;
-    Collider2D rangeCollider;
+    CircleCollider2D rangeCollider;
     public SpriteRenderer spriteRenderer;
     public SpriteRenderer highlightRenderer;
     public Color defaultColour;
     public bool inRange = false;
+    private float colliderSizeSmall = 0.01f;
+    private float colliderSizeLarge = 1.0f;
     //public bool isRangeExtended = false;
 
     public List<Sprite> blockSprites = new List<Sprite>();
+    public List<Sprite> selectionSprites = new List<Sprite>();
+    public List<float> selectionSize = new List<float>();
     
     void Start()
     {
-        rangeCollider = rangeObject.GetComponent<Collider2D>();
+        rangeCollider = rangeObject.GetComponent<CircleCollider2D>();
         defaultColour = spriteRenderer.color;
         SetSprite(0);
         //spriteRenderer = GetComponentInChildren<SpriteRenderer>();
@@ -55,7 +59,7 @@ public class Mouse : MonoBehaviour
     }
 
     void SetRange(bool isinRange = false)
-    {
+    {   
         if (isinRange) {
             spriteRenderer.color = defaultColour;
             highlightRenderer.color = defaultColour;
@@ -71,6 +75,20 @@ public class Mouse : MonoBehaviour
     public void SetSprite(int index)
     {
         spriteRenderer.sprite = blockSprites[index];
+        highlightRenderer.sprite = selectionSprites[index];
+        rangeCollider.radius = selectionSize[index];
+        /*
+        if (highlightRenderer.sprite.bounds.size.x > 8)
+        {
+            rangeCollider.radius = colliderSizeLarge;
+            Debug.Log("Beeg");
+        }
+        else
+        {
+            rangeCollider.radius = colliderSizeSmall;
+            Debug.Log("Small");
+        }
+        */
     }
 
 }
