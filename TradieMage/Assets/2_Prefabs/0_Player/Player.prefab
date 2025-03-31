@@ -387,13 +387,15 @@ MonoBehaviour:
   buildRadiusExtended: 13.5
   mouseBuildCheckOffset: {x: 0.5, y: -0.5, z: 0}
   mana: 3
-  boxCosts: 0100000003000000
+  boxCosts: 010000000200000003000000
   selectedBox: 0
   boxTypes:
   - {fileID: 7334484627588262577, guid: 591acc52c02abe642bd431de2d3280ec, type: 3}
+  - {fileID: 7334484627588262577, guid: c6a653c4f011b3d4a91aa13373c48133, type: 3}
   - {fileID: 7334484627588262577, guid: d27965e53403e1646821108e0c4ed8dd, type: 3}
   boxTypeNames:
   - Wooden
+  - BigBox
   - Metal
   selectedBoxHUDText: {fileID: 0}
   coords: {fileID: 0}
