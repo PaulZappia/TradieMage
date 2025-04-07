@@ -12,6 +12,9 @@ public class SwitchingBlock : SwitchEnum
     //public Collision2D collision2D;
     public GameObject groundObject;
 
+    public GameObject switchController;
+    public SwitchController switchControllerScript;
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Awake()
@@ -19,19 +22,28 @@ public class SwitchingBlock : SwitchEnum
         spriteRenderer = this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         //collision2D = this.gameObject.transform.GetChild(0).GetComponent<Collision2D>();
         groundObject = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
-        ToggleBlock(isActive);
+    }
+
+    private void Start()
+    {
+        switchController = GameObject.FindGameObjectWithTag(blockColour + "SwitchController");
+        switchControllerScript = switchController.GetComponent<SwitchController>();
+        switchControllerScript.gameObjects.Add(gameObject);
+        ToggleBlock(switchControllerScript.isSwitchActive);
     }
 
     public void ToggleBlock(bool state)
     {
         isActive = state;
         //collision2D.collider.enabled = state;
-        groundObject.SetActive(state);
+        groundObject.GetComponent<BoxCollider2D>().enabled = state;
+        Debug.Log(gameObject.name);
+        //groundObject.SetActive(state);
         spriteRenderer.sprite = sprites[Convert.ToInt32(isActive)];
     }
     private void Update()
     {
-        
+
     }
 
 }

@@ -6,7 +6,9 @@ using UnityEngine;
 public class SwitchController : SwitchEnum
 {
     public List<GameObject> gameObjects;
-    public GameObject[] gameObjectsArray;
+    //public GameObject[] gameObjectsArray;
+    public bool isSwitchActive = false;
+    private bool previousSwitchActiveState = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -16,13 +18,16 @@ public class SwitchController : SwitchEnum
 
     private void Awake()
     {
-        PopulateChildBlocks();
+        //PopulateChildBlocks();
+        previousSwitchActiveState = isSwitchActive;
+        gameObject.tag = blockColour + "SwitchController";
     }
 
     void PopulateChildBlocks()
     {
-        gameObjectsArray = GameObject.FindGameObjectsWithTag("SwitchingBlock");
+        //gameObjectsArray = GameObject.FindGameObjectsWithTag("SwitchingBlock");
         
+        /*
         foreach (var child in gameObjectsArray) 
         { 
             if (child.GetComponent<SwitchingBlock>().blockColour == blockColour)
@@ -34,6 +39,7 @@ public class SwitchController : SwitchEnum
                 return;
             }
         }
+        */
         
     }
 
@@ -44,4 +50,15 @@ public class SwitchController : SwitchEnum
             child.GetComponent<SwitchingBlock>().ToggleBlock(state);
         }
     }
+
+    public void Update()
+    {
+        isSwitchActive = isActive;
+        if (isSwitchActive != previousSwitchActiveState) 
+        {
+            ToggleAll(isSwitchActive);
+            previousSwitchActiveState = isSwitchActive;
+        }
+    }
+
 }
