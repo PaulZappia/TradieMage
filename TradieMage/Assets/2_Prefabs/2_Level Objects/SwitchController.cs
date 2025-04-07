@@ -1,47 +1,45 @@
-using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class SwitchController : SwitchEnum
 {
-    public List<GameObject> gameObjects;
-    public GameObject[] gameObjectsArray;
-
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+    [SerializeField] private List<GameObject> gameObjects = new List<GameObject>();
+    private GameObject[] gameObjectsArray;
 
     private void Awake()
     {
         PopulateChildBlocks();
     }
 
-    void PopulateChildBlocks()
+    private void PopulateChildBlocks()
     {
         gameObjectsArray = GameObject.FindGameObjectsWithTag("SwitchingBlock");
-        
-        foreach (var child in gameObjectsArray) 
-        { 
-            if (child.GetComponent<SwitchingBlock>().blockColour == blockColour)
+
+        foreach (var child in gameObjectsArray)
+        {
+            if (child != null)
             {
-                gameObjects.Add(child);
-            } 
-            else if (child == null)
-            {
-                return;
+                SwitchingBlock switchBlock = child.GetComponent<SwitchingBlock>();
+                if (switchBlock != null && switchBlock.blockColour == blockColour)
+                {
+                    gameObjects.Add(child);
+                }
             }
         }
-        
     }
 
     public void ToggleAll(bool state)
     {
         foreach (var child in gameObjects)
         {
-            child.GetComponent<SwitchingBlock>().ToggleBlock(state);
+            if (child != null)
+            {
+                SwitchingBlock switchBlock = child.GetComponent<SwitchingBlock>();
+                if (switchBlock != null)
+                {
+                    switchBlock.ToggleBlock(state);
+                }
+            }
         }
     }
 }
