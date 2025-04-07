@@ -9,6 +9,9 @@ TagManager:
   - PlayerRadius
   - SwitchingBlock
   - Teleporter
+  - RedSwitchController
+  - GreenSwitchController
+  - BlueSwitchController
   layers:
   - Default
   - TransparentFX
