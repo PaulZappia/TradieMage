@@ -2,67 +2,82 @@ using UnityEngine;
 
 public class MovingPlatform : ToggleObject
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-
-    public Transform pointA;
-    public Transform pointB;
-    public float moveSpeed = 1f;
-    //public bool isActive = true;//{ get; set; } = true;
-
+    [Header("Movement Settings")]
+    [SerializeField] private Transform pointA;
+    [SerializeField] private Transform pointB;
+    [SerializeField] private float moveSpeed = 1f;
+    
     private Vector3 nextPosition;
-
-    void Start()
+    private Transform cachedTransform;
+    
+    private void Awake()
     {
+        cachedTransform = transform;
+    }
+    
+    private void Start()
+    {
+        // Validate that points are assigned
+        if (pointA == null || pointB == null)
+        {
+            Debug.LogError("Moving platform points not assigned", this);
+            enabled = false;
+            return;
+        }
+        
         nextPosition = pointB.position;
     }
-
-    // Update is called once per frame
-    void Update()
+    
+    private void Update()
     {
+        // Handle movement when active
         if (isActive)
         {
-            transform.position = Vector3.MoveTowards(transform.position, nextPosition, moveSpeed * Time.deltaTime);
+            cachedTransform.position = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
         }
-       
-
-        if(transform.position == nextPosition)
+        
+        // Handle target switching regardless of active state
+        if (cachedTransform.position == nextPosition)
         {
             nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
         }
     }
-
-
+    
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player"))
+        GameObject collisionObject = collision.gameObject;
+        
+        // Handle player collision
+        if (collisionObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.parent = transform;
+            collisionObject.transform.SetParent(cachedTransform);
+            return;
         }
-        if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
+        
+        // Handle box collision
+        BoxCollider2D boxCollider = collisionObject.GetComponentInChildren<BoxCollider2D>();
+        if (boxCollider != null && boxCollider.CompareTag("BoxTag"))
         {
-            
-            //Debug.Log("Box");
-            collision.gameObject.transform.parent = transform;
-
+            collisionObject.transform.SetParent(cachedTransform);
         }
-        //Debug.Log(collision.gameObject.GetComponentInChildren<BoxCollider2D>().ToString());
     }
-
+    
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Player") || collision.gameObject.CompareTag("BoxTag"))
+        GameObject collisionObject = collision.gameObject;
+        
+        // Handle player collision
+        if (collisionObject.CompareTag("Player"))
         {
-            collision.gameObject.transform.parent = null;
+            collisionObject.transform.SetParent(null);
+            return;
         }
-        if (collision.gameObject.GetComponentInChildren<BoxCollider2D>().CompareTag("BoxTag"))
+        
+        // Handle box collision
+        BoxCollider2D boxCollider = collisionObject.GetComponentInChildren<BoxCollider2D>();
+        if (boxCollider != null && boxCollider.CompareTag("BoxTag"))
         {
-            collision.gameObject.transform.parent = null;
+            collisionObject.transform.SetParent(null);
         }
     }
-
-    
-
-
-
-
 }
