@@ -1,5 +1,3 @@
-using NUnit.Framework;
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -10,12 +8,6 @@ public class SwitchController : SwitchEnum
     public bool isSwitchActive = false;
     private bool previousSwitchActiveState = false;
 
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
-
     private void Awake()
     {
         //PopulateChildBlocks();
@@ -23,7 +15,7 @@ public class SwitchController : SwitchEnum
         gameObject.tag = blockColour + "SwitchController";
     }
 
-    void PopulateChildBlocks()
+    private void PopulateChildBlocks()
     {
         //gameObjectsArray = GameObject.FindGameObjectsWithTag("SwitchingBlock");
         
@@ -47,7 +39,14 @@ public class SwitchController : SwitchEnum
     {
         foreach (var child in gameObjects)
         {
-            child.GetComponent<SwitchingBlock>().ToggleBlock(state);
+            if (child != null)
+            {
+                SwitchingBlock switchBlock = child.GetComponent<SwitchingBlock>();
+                if (switchBlock != null)
+                {
+                    switchBlock.ToggleBlock(state);
+                }
+            }
         }
     }
 
