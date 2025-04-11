@@ -6,13 +6,18 @@ public class MovingPlatform : ToggleObject
     [SerializeField] private Transform pointA;
     [SerializeField] private Transform pointB;
     [SerializeField] private float moveSpeed = 1f;
-    
+    [SerializeField] private bool isPaused = false;
+
     private Vector3 nextPosition;
     private Transform cachedTransform;
-    
+
+    public float waitTimer = 0;
+    public float maxWaitTime = 1.5f;
+
     private void Awake()
     {
         cachedTransform = transform;
+        //waitTimer = maxWaitTime;
     }
     
     private void Start()
@@ -31,7 +36,7 @@ public class MovingPlatform : ToggleObject
     private void Update()
     {
         // Handle movement when active
-        if (isActive)
+        if (isActive && !isPaused)
         {
             cachedTransform.position = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
         }
@@ -39,7 +44,21 @@ public class MovingPlatform : ToggleObject
         // Handle target switching regardless of active state
         if (cachedTransform.position == nextPosition)
         {
-            nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
+            //Wait here for 1 sec
+            isPaused = true;
+
+            //waitTimer = waitTime;
+            if (waitTimer >= 0)
+            {
+                waitTimer -= Time.deltaTime;
+            } 
+            else
+            {
+                nextPosition = (nextPosition == pointA.position) ? pointB.position : pointA.position;
+                waitTimer = maxWaitTime;
+                isPaused = false;
+            }
+            
         }
     }
     
