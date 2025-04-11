@@ -7,12 +7,18 @@ public class SwitchController : SwitchEnum
     //public GameObject[] gameObjectsArray;
     public bool isSwitchActive = false;
     private bool previousSwitchActiveState = false;
+    public bool invertBlocks = false;
 
     private void Awake()
     {
         //PopulateChildBlocks();
         previousSwitchActiveState = isSwitchActive;
         gameObject.tag = blockColour + "SwitchController";
+    }
+
+    private void Start()
+    {
+        ToggleAll(isSwitchActive);
     }
 
     private void PopulateChildBlocks()
@@ -44,7 +50,7 @@ public class SwitchController : SwitchEnum
                 SwitchingBlock switchBlock = child.GetComponent<SwitchingBlock>();
                 if (switchBlock != null)
                 {
-                    switchBlock.ToggleBlock(state);
+                    switchBlock.ToggleBlock(state ^ invertBlocks);
                 }
             }
         }
