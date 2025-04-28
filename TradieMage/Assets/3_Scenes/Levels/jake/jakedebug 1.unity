@@ -1281,6 +1281,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4125924192805302608, guid: 801b1bb45cbaf584cb32d90b5ec8d3b8, type: 3}
+      propertyPath: m_Color.a
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8549927141956619106, guid: 801b1bb45cbaf584cb32d90b5ec8d3b8, type: 3}
       propertyPath: m_Name
       value: EnergyDrink
