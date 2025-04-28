@@ -8,6 +8,7 @@ public class NailButton : MonoBehaviour
     public SpriteRenderer buttonSprite;
     public Sprite buttonActive;
     public Sprite buttonInactive;
+    public Animator buttonAnimator;
 
     public ToggleObject connectedObject1;
     //public GameObject connectedObject1;
@@ -30,6 +31,8 @@ public class NailButton : MonoBehaviour
         {
             //Debug.Log("yay");
             isPressed = true;
+            buttonAnimator.SetBool("Pressed", isPressed);
+            buttonAnimator.Play(Animator.StringToHash("NailButtonRaised"));
             //buttonSprite.sprite.///////////////////////////////////////////
             if (connectedObject1 != null)
             {
@@ -44,6 +47,8 @@ public class NailButton : MonoBehaviour
         {
             //Debug.Log("nay :(");
             isPressed = false;
+            buttonAnimator.SetBool("Pressed",isPressed);
+            buttonAnimator.Play(Animator.StringToHash("NailButtonDown"));
             if (connectedObject1 != null)
             {
                 connectedObject1.isActive = false;
