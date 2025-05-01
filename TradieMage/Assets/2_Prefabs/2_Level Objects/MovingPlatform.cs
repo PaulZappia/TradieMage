@@ -29,7 +29,7 @@ public class MovingPlatform : ToggleObject
             enabled = false;
             return;
         }
-        
+        waitTimer = maxWaitTime;
         nextPosition = pointB.position;
     }
     
