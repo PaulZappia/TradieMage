@@ -87,7 +87,7 @@ public class PlayerBuild : MonoBehaviour
         mouseObject = GameObject.Find("MouseCollider");
         mouseScript = mouseObject.GetComponent<Mouse>();
 
-
+        mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
 
     }
 
@@ -148,10 +148,17 @@ public class PlayerBuild : MonoBehaviour
         //if (Mathf.Sign(rigidBody.linearVelocity.x) != 0) 
         //    SetFacingDirection(Mathf.Sign(rigidBody.linearVelocity.x));
 
+        mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
+        
 
         mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         RoundMouseCoords();
         UpdateHUD();
+
+
+        
+        
+        
 
     }
 
@@ -170,7 +177,7 @@ public class PlayerBuild : MonoBehaviour
         {
             RecycleBox();
         }
-
+        mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
 
     }
 
@@ -279,6 +286,7 @@ public class PlayerBuild : MonoBehaviour
                 newBox.GetComponentInChildren<Box>().manaCost = boxCosts[selectedBox];
                 newBox.GetComponentInChildren<ParticleSystem>().Play();
                 mana -= boxCosts[selectedBox];
+                mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
                 //Debug.Log(boxCosts[selectedBox]);
             }
         }
@@ -304,6 +312,8 @@ public class PlayerBuild : MonoBehaviour
         {
             Destroy(overlappingBox.gameObject.transform.parent.gameObject);
             mana += overlappingBox.GetComponent<Box>().manaCost;
+            mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
+            mouseScript.updateOutOfMana();
         }
     }
 

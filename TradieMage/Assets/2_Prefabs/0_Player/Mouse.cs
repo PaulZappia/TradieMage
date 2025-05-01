@@ -15,6 +15,8 @@ public class Mouse : MonoBehaviour
     private float colliderSizeLarge = 1.0f;
     //public bool isRangeExtended = false;
 
+    public bool isOutOfMana = false;
+
     public List<Sprite> blockSprites = new List<Sprite>();
     public List<Sprite> selectionSprites = new List<Sprite>();
     public List<float> selectionSize = new List<float>();
@@ -25,12 +27,13 @@ public class Mouse : MonoBehaviour
         defaultColour = spriteRenderer.color;
         SetSprite(0);
         //spriteRenderer = GetComponentInChildren<SpriteRenderer>();
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        updateOutOfMana();
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -63,6 +66,7 @@ public class Mouse : MonoBehaviour
         if (isinRange) {
             spriteRenderer.color = defaultColour;
             highlightRenderer.color = defaultColour;
+            updateOutOfMana();
         } 
         else
         {
@@ -70,6 +74,31 @@ public class Mouse : MonoBehaviour
             highlightRenderer.color = Color.red;
         }
         inRange = isinRange;
+        //if not enough mana
+        
+
+    }
+
+    public void updateOutOfMana()
+    {
+        if (isOutOfMana)
+        {
+            spriteRenderer.color = Color.grey;
+            highlightRenderer.color = Color.grey;
+        }
+        else
+        {
+            if (inRange)
+            {
+                spriteRenderer.color = defaultColour;
+                highlightRenderer.color = defaultColour;
+            }
+            else
+            {
+                spriteRenderer.color = Color.red;
+                highlightRenderer.color = Color.red;
+            }
+        }
     }
 
     public void SetSprite(int index)
