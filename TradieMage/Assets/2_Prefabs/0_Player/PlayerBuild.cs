@@ -128,7 +128,20 @@ public class PlayerBuild : MonoBehaviour
             mouseScript.SetSprite(selectedBox);
         }
 
+        if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+            selectedBox = 0;
+        }
 
+        if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+            selectedBox = 1;
+        }
+
+        if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+            selectedBox = 2;
+        }
 
 
         //flip sprite
