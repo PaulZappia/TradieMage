@@ -986,6 +986,10 @@ PrefabInstance:
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4005450433412901696, guid: 06f42c65230c4a84f82689f425a4e936, type: 3}
+      propertyPath: maxWaitTime
+      value: 1.5
+      objectReference: {fileID: 0}
     - target: {fileID: 7252740241158221183, guid: 06f42c65230c4a84f82689f425a4e936, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7
