@@ -10,6 +10,7 @@ public class MovingPlatform : ToggleObject
 
     private Vector3 nextPosition;
     private Transform cachedTransform;
+    private Transform targetTransform;
 
     public float waitTimer = 0;
     public float maxWaitTime = 1.5f;
@@ -38,6 +39,8 @@ public class MovingPlatform : ToggleObject
         // Handle movement when active
         if (isActive && !isPaused)
         {
+            //cachedTransform.position = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
+            //targetTransform.position = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
             cachedTransform.position = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
         }
         

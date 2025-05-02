@@ -164,9 +164,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6ae41e6b515f5647b2a9fee378e3396, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  isActive: 1
   pointA: {fileID: 7315527732644060959}
   pointB: {fileID: 7252740241158221183}
   moveSpeed: 2
+  isPaused: 0
+  waitTimer: 0
+  maxWaitTime: 1.5
 --- !u!251 &3498758486903535059
 PlatformEffector2D:
   m_ObjectHideFlags: 0
