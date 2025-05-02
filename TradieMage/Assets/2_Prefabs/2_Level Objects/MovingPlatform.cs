@@ -1,3 +1,5 @@
+//using System.Diagnostics;
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class MovingPlatform : ToggleObject
@@ -11,13 +13,21 @@ public class MovingPlatform : ToggleObject
     private Vector3 nextPosition;
     private Transform cachedTransform;
     private Vector3 targetTransform;
-
+    private Vector3 tempTransform;
     public float waitTimer = 0;
     public float maxWaitTime = 1.5f;
+
+    public LayerMask groundLayer;
+
+    public Transform checkUp;
+    public Transform checkDown;
+    public Transform checkLeft;
+    public Transform checkRight;
 
     private void Awake()
     {
         cachedTransform = transform;
+        targetTransform = transform.position;
         //waitTimer = maxWaitTime;
     }
     
@@ -40,8 +50,30 @@ public class MovingPlatform : ToggleObject
         if (isActive && !isPaused)
         {
             //cachedTransform.position = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
-            targetTransform = Vector3.MoveTowards(cachedTransform.position, nextPosition, moveSpeed * Time.deltaTime);
+            targetTransform = Vector3.MoveTowards(targetTransform, nextPosition, moveSpeed * Time.deltaTime);
+            //if nothing there move
+
+            tempTransform = cachedTransform.position;
             cachedTransform.position = Vector3.MoveTowards(cachedTransform.position, targetTransform, moveSpeed * Time.deltaTime);
+
+            if (Physics2D.OverlapBox(checkLeft.position, new Vector2(0.01f,0.5f), 0, groundLayer) || Physics2D.OverlapBox(checkRight.position, new Vector2(0.01f, 0.5f), 0, groundLayer))
+            {
+                Debug.Log("<AUNBT");
+            }
+            /*
+            Physics2D solid = Physics2D.OverlapBox(cachedTransform.position, cachedTransform.GetComponent<BoxCollider2D>().size, 0, groundLayer);
+            if (solid != null &&   )
+            {
+
+                cachedTransform.position = tempTransform;
+                Debug.Log("Bonk");
+            }
+            else
+            {
+                
+            }
+            */
+
         }
         
         // Handle target switching regardless of active state
@@ -82,6 +114,10 @@ public class MovingPlatform : ToggleObject
         {
             collisionObject.transform.SetParent(cachedTransform);
         }
+
+        //if (Phys)
+
+
     }
     
     private void OnCollisionExit2D(Collision2D collision)
@@ -102,4 +138,15 @@ public class MovingPlatform : ToggleObject
             collisionObject.transform.SetParent(null);
         }
     }
+
+
+
+
+
+    private void OnDrawGizmos()
+    {
+        //Ground checker
+        //Gizmos.DrawWireCube(cachedTransform.position, cachedTransform.GetComponent<BoxCollider2D>().size);
+    }
+
 }
