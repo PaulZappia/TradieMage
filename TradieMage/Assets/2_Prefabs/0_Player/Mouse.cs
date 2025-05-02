@@ -83,8 +83,16 @@ public class Mouse : MonoBehaviour
     {
         if (isOutOfMana)
         {
-            spriteRenderer.color = Color.grey;
-            highlightRenderer.color = Color.grey;
+            if (inRange)
+            {
+                spriteRenderer.color = Color.grey;
+                highlightRenderer.color = Color.grey;
+            }
+            else
+            {
+                spriteRenderer.color = Color.red;
+                highlightRenderer.color = Color.red;
+            }
         }
         else
         {
