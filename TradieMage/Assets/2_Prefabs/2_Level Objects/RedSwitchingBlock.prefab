@@ -199,7 +199,10 @@ MonoBehaviour:
   - {fileID: 1879204006, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
   - {fileID: 1226019552, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
   spriteRenderer: {fileID: 0}
-  groundObject: {fileID: 0}
+  groundObject: {fileID: 407710952755284442}
+  blockObject: {fileID: 9021927719693405632}
+  switchController: {fileID: 0}
+  switchControllerScript: {fileID: 0}
 --- !u!1 &9021927719693405632
 GameObject:
   m_ObjectHideFlags: 0

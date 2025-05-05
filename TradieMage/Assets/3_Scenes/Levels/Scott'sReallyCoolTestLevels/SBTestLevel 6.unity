@@ -349,6 +349,11 @@ MonoBehaviour:
   m_CropFrameX: 0
   m_CropFrameY: 0
   m_StretchFill: 0
+--- !u!1 &875914238 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 9021927719693405632, guid: 365dda3fd379fee4ca329be6c0e5fe36, type: 3}
+  m_PrefabInstance: {fileID: 1090407690}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &966266995
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -485,6 +490,14 @@ PrefabInstance:
       propertyPath: isActive
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5441628539836158217, guid: 365dda3fd379fee4ca329be6c0e5fe36, type: 3}
+      propertyPath: blockObject
+      value: 
+      objectReference: {fileID: 875914238}
+    - target: {fileID: 5441628539836158217, guid: 365dda3fd379fee4ca329be6c0e5fe36, type: 3}
+      propertyPath: groundObject
+      value: 
+      objectReference: {fileID: 1664260500}
     - target: {fileID: 7334484627588262577, guid: 365dda3fd379fee4ca329be6c0e5fe36, type: 3}
       propertyPath: m_Name
       value: RedSwitchingBlock
@@ -920,6 +933,11 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
   m_PrefabInstance: {fileID: 1679638559}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1 &1664260500 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 407710952755284442, guid: 365dda3fd379fee4ca329be6c0e5fe36, type: 3}
+  m_PrefabInstance: {fileID: 1090407690}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1664899418
 PrefabInstance:

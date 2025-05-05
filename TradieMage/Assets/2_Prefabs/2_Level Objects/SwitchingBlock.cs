@@ -11,6 +11,7 @@ public class SwitchingBlock : SwitchEnum
     public SpriteRenderer spriteRenderer;
     //public Collision2D collision2D;
     public GameObject groundObject;
+    public GameObject blockObject;
 
     public GameObject switchController;
     public SwitchController switchControllerScript;
@@ -21,7 +22,7 @@ public class SwitchingBlock : SwitchEnum
     {
         spriteRenderer = this.gameObject.transform.GetChild(0).GetComponent<SpriteRenderer>();
         //collision2D = this.gameObject.transform.GetChild(0).GetComponent<Collision2D>();
-        groundObject = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
+        //groundObject = this.gameObject.transform.GetChild(0).GetChild(0).gameObject;
     }
 
     private void Start()
@@ -36,7 +37,10 @@ public class SwitchingBlock : SwitchEnum
     {
         isActive = state;
         //collision2D.collider.enabled = state;
+        //groundObject.gameObject.SetActive(state);
+        //GetComponent<BoxCollider2D>().enabled = state;
         groundObject.GetComponent<BoxCollider2D>().enabled = state;
+        blockObject.GetComponent<BoxCollider2D>().enabled = state;
         Debug.Log(gameObject.name);
         //groundObject.SetActive(state);
         spriteRenderer.sprite = sprites[Convert.ToInt32(isActive)];
