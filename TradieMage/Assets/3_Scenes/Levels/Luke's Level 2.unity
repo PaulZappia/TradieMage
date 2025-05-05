@@ -188,7 +188,7 @@ SpriteRenderer:
   m_Size: {x: 0.1, y: 0.1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!4 &655363767
@@ -269,7 +269,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 7.2
+  orthographic size: 4.6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -626,6 +626,10 @@ PrefabInstance:
       propertyPath: coords
       value: 
       objectReference: {fileID: 0}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: jumpSound
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f04790a47f6a4b7f815bfec71f356d4, type: 3}
     - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
       propertyPath: buildRange
       value: 5
