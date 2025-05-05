@@ -51,6 +51,15 @@ public class PlayerBuild : MonoBehaviour
     public List<GameObject> boxTypes = new List<GameObject>();
     public List<string> boxTypeNames = new List<string>();
 
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip buildSound;
+    public AudioClip destroySound;
+    [UnityEngine.Range(0f, 1f)]
+    public float soundVolume = 0.7f;
+
+    [Header("Destruction Effects")]
+    public GameObject destroyEffectPrefab;
 
     [Header("HUD")]
     public TMP_Text selectedBoxHUDText;
@@ -89,6 +98,15 @@ public class PlayerBuild : MonoBehaviour
 
         mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
 
+        // Get or add AudioSource component
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
     }
 
     // Update is called once per frame
@@ -288,6 +306,12 @@ public class PlayerBuild : MonoBehaviour
                 mana -= boxCosts[selectedBox];
                 mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
                 //Debug.Log(boxCosts[selectedBox]);
+                
+                // Play build sound
+                if (buildSound != null && audioSource != null)
+                {
+                    audioSource.PlayOneShot(buildSound, soundVolume);
+                }
             }
         }
     }
@@ -296,29 +320,51 @@ public class PlayerBuild : MonoBehaviour
     {
         Vector3 currentMousePos = mousePosRound;
 
-
         if (mouseScript.inRange == false)
         {
             return;
         }
-        
 
-        //Vector3 mousePos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        //
         Collider2D overlappingBox = Physics2D.OverlapBox(currentMousePos + mouseBuildCheckOffset, new Vector2(0.01f, 0.01f), 0, boxLayer);
 
-        //Debug.Log(newBox);
         if (overlappingBox != null)
         {
+            // Store position before destroying for effects
+            Vector3 boxPosition = overlappingBox.transform.position;
+            int boxManaCost = overlappingBox.GetComponent<Box>().manaCost;
+            
+            // Play destroy effects
+            PlayDestroyEffects(boxPosition);
+            
+            // Destroy the box
             Destroy(overlappingBox.gameObject.transform.parent.gameObject);
-            mana += overlappingBox.GetComponent<Box>().manaCost;
+            
+            // Add mana
+            mana += boxManaCost;
+            
+            // Update UI
             mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
             mouseScript.updateOutOfMana();
         }
     }
 
-    
-
+    private void PlayDestroyEffects(Vector3 position)
+    {
+        // Play destroy sound
+        if (destroySound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(destroySound, soundVolume);
+        }
+        
+        // Spawn visual effect if we have one
+        if (destroyEffectPrefab != null)
+        {
+            GameObject effect = Instantiate(destroyEffectPrefab, position, Quaternion.identity);
+            
+            // Auto-destroy effect after 2 seconds
+            Destroy(effect, 2f);
+        }
+    }
 
     public void setBuildRadiusExtended(bool extended)
     {
@@ -341,13 +387,5 @@ public class PlayerBuild : MonoBehaviour
         Gizmos.DrawCube(mousePosRound+ new Vector3(0.5f, -0.5f, 0f), new Vector3(0.1f, 0.1f, 0.01f));//mouse block check
         Gizmos.DrawCube(mousePos, new Vector3(0.2f, 0.2f, 0.01f));//mouse block check
         Gizmos.DrawWireCube(transform.position, new Vector3(0.01f, 0.01f, 0.01f));//mouse block check
-
-        
-
-
-
     }
-
-    
 }
-
