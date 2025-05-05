@@ -23,6 +23,12 @@ public class PlayerMovement : MonoBehaviour
     public int maxJumps = 1;
     //public int jumpTimerMax = 5; //maybe?
     //private int jumpTimer = 0;
+    
+    [Header("Audio")]
+    public AudioSource audioSource;
+    public AudioClip jumpSound;
+    [UnityEngine.Range(0f, 1f)]
+    public float jumpVolume = 0.7f;
 
     [Header("Groundcheck")]
     public Transform groundCheckPosition;
@@ -50,7 +56,15 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        
+        // Get or add AudioSource component
+        if (audioSource == null)
+        {
+            audioSource = GetComponent<AudioSource>();
+            if (audioSource == null)
+            {
+                audioSource = gameObject.AddComponent<AudioSource>();
+            }
+        }
     }
 
     // Update is called once per frame
@@ -96,15 +110,14 @@ public class PlayerMovement : MonoBehaviour
         if (jumpsRemaining > 0) 
         {
             //On press jumpbutton
-            if (context.performed )
+            if (context.performed)
             {
                 rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocityX, jumpPower);
                 jumpsRemaining--;
                 //jumpTimer = jumpTimerMax;
 
-                //play sfx
-
-
+                //play jump sound
+                PlayJumpSound();
             }
             //onrelease jump button
             else if (context.canceled)
@@ -112,10 +125,19 @@ public class PlayerMovement : MonoBehaviour
                 //cancel jump, for small jumps
                 rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocity.x, rigidBody.linearVelocityY * 0.5f);
             }
-
-
         }
-        
+    }
+
+    private void PlayJumpSound()
+    {
+        if (jumpSound != null && audioSource != null)
+        {
+            audioSource.PlayOneShot(jumpSound, jumpVolume);
+        }
+        else
+        {
+            Debug.LogWarning("Jump sound or audio source not assigned!");
+        }
     }
 
     private void GroundCheck()
@@ -164,7 +186,4 @@ public class PlayerMovement : MonoBehaviour
         //Gizmos.DrawCube(mousePos, new Vector3(0.2f, 0.2f, 0.01f));//mouse block check
         Gizmos.DrawWireCube(transform.position, new Vector3(0.01f, 0.01f, 0.01f));//mouse block check
     }
-
-
 }
-
