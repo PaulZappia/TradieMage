@@ -16,6 +16,8 @@ public class NailButton : MonoBehaviour
     void Start()
     {
         buttonSprite = GetComponentInChildren<SpriteRenderer>();
+        //buttonAnimator.updateMode = AnimatorUpdateMode.UnscaledTime;
+        buttonAnimator.Play(Animator.StringToHash("NailButtonRaised"));
     }
 
     // Update is called once per frame
