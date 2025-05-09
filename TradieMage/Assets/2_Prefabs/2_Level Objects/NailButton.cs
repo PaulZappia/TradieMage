@@ -33,9 +33,10 @@ public class NailButton : MonoBehaviour
         {
             //Debug.Log("yay");
             isPressed = true;
+            buttonAnimator.StopPlayback();
             buttonAnimator.SetBool("Pressed", isPressed);
-            buttonAnimator.Play(Animator.StringToHash("NailButtonRaised"));
-            //buttonSprite.sprite.///////////////////////////////////////////
+            buttonAnimator.Play(Animator.StringToHash("NailButtonRaised"), -1, 0.7f);
+
             if (connectedObject1 != null)
             {
                 connectedObject1.isActive = true;
@@ -49,8 +50,10 @@ public class NailButton : MonoBehaviour
         {
             //Debug.Log("nay :(");
             isPressed = false;
+            buttonAnimator.StopPlayback();
             buttonAnimator.SetBool("Pressed",isPressed);
-            buttonAnimator.Play(Animator.StringToHash("NailButtonDown"));
+            buttonAnimator.Play(Animator.StringToHash("NailButtonDown"), -1, 0.7f);
+
             if (connectedObject1 != null)
             {
                 connectedObject1.isActive = false;
