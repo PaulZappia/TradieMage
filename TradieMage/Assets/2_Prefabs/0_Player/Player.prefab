@@ -199,6 +199,9 @@ MonoBehaviour:
   moveSpeed: 5
   jumpPower: 10
   maxJumps: 1
+  audioSource: {fileID: 0}
+  jumpSound: {fileID: 0}
+  jumpVolume: 0.7
   groundCheckPosition: {fileID: 1684406243467247329}
   groundCheckSize: {x: 0.5, y: 0.05}
   groundLayer:
@@ -397,6 +400,11 @@ MonoBehaviour:
   - Wooden
   - BigBox
   - Metal
+  audioSource: {fileID: 0}
+  buildSound: {fileID: 8300000, guid: d4bad9283d180474ca506fc94d9de6d0, type: 3}
+  destroySound: {fileID: 8300000, guid: 257b1503f59ed40b594667122e45ca12, type: 3}
+  soundVolume: 0.7
+  destroyEffectPrefab: {fileID: 0}
   selectedBoxHUDText: {fileID: 0}
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
