@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7cf045fade0349446a8fafd4a69b072a
+guid: 08ca166b866225848855d854ebc99778
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 8
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -149,23 +149,23 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: logo draft 1_0
+      name: char temp_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 92
-        height: 47
+        width: 10
+        height: 10
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       customData: 
       outline: []
       physicsShape: []
-      tessellationDetail: 0
+      tessellationDetail: -1
       bones: []
-      spriteID: 7a720901018ca6e409681f0812669b7c
-      internalID: 83659858
+      spriteID: 68ead01b6bea5b740800000000000000
+      internalID: 5167228247155256966
       vertices: []
       indices: 
       edges: []
@@ -174,7 +174,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: e32db5021f215b040952ddd3f6f302f4
+    spriteID: 
     internalID: 0
     vertices: []
     indices: 
@@ -185,7 +185,6 @@ TextureImporter:
       entries: []
     nameFileIdTable:
       char temp_0: 5167228247155256966
-      logo draft 1_0: 83659858
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
