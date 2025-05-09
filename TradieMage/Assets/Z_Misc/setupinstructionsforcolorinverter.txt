@@ -1,0 +1,20 @@
+Setup Instructions:
+
+GameManager Setup:
+
+Create an empty GameObject in your first scene
+Add the updated GameManager script
+Fill in your scene list
+
+
+Camera Setup:
+
+Add the ColorInverter script to your main camera in each scene
+Adjust the inversion strength and transition duration as desired
+
+
+Interactive Objects:
+
+Add the InteractableObject script to any object you want players to interact with
+Enable "Toggle Color Inversion"
+Set "Invert On Touch" to true if you want automatic inversion on contact, or false if you want key-press interaction
