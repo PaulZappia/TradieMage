@@ -2,31 +2,25 @@ using UnityEngine;
 using UnityEngine.InputSystem;
 using System.Collections;
 using System.Collections.Generic;
-//using Unity.Android.Types;
 using TMPro;
 using System;
-using NUnit.Framework;
-using UnityEngine.Rendering;
 
 public class PlayerMovement : MonoBehaviour
 {
-
     public Rigidbody2D rigidBody;
     [Header("Movement")]
     public float moveSpeed = 5f;
     float horizontalMovement;
-    //bool facingRight = true;
 
     [Header("Jump")]
     public float jumpPower = 10f;
     private int jumpsRemaining = 0;
     public int maxJumps = 1;
-    //public int jumpTimerMax = 5; //maybe?
-    //private int jumpTimer = 0;
     
     [Header("Audio")]
     public AudioSource audioSource;
-    public AudioClip jumpSound;
+    // Changed to support multiple jump sounds
+    public AudioClip[] jumpSounds;
     [UnityEngine.Range(0f, 1f)]
     public float jumpVolume = 0.7f;
 
@@ -54,9 +48,6 @@ public class PlayerMovement : MonoBehaviour
     public RaycastHit2D raycastHit;
     public Vector2 mouseDirection;
 
-
-    //private bool isFacingRight = false;
-
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -81,25 +72,13 @@ public class PlayerMovement : MonoBehaviour
         
         GroundCheck();
 
-        //flip sprite
-        //if (Mathf.Sign(rigidBody.linearVelocity.x) != 0) 
-        //    SetFacingDirection(Mathf.Sign(rigidBody.linearVelocity.x));
-
-
         UpdateHUD();
         playerAnimator.SetFloat("magnitude", rigidBody.linearVelocity.magnitude);
-    }
-
-    public void FixedUpdate()
-    {
-        
-
     }
     
     public void UpdateHUD()
     {
         coordsPlayer.text = "PlayerX: " + gameObject.transform.position.x.ToString("F2") + "\n" + "PlayerY: " + gameObject.transform.position.y.ToString("F2");
-
     }
     
     public void Move(InputAction.CallbackContext context)
@@ -114,7 +93,6 @@ public class PlayerMovement : MonoBehaviour
         {
             playerAnimator.Play(Animator.StringToHash("Idle"));
         }
-        //Debug.Log(horizontalMovement);
     }
 
     public void Jump(InputAction.CallbackContext context)
@@ -126,11 +104,9 @@ public class PlayerMovement : MonoBehaviour
             {
                 rigidBody.linearVelocity = new Vector2(rigidBody.linearVelocityX, jumpPower);
                 jumpsRemaining--;
-                //jumpTimer = jumpTimerMax;
 
                 //play jump sound
                 PlayJumpSound();
-                //playerAnimator.Play(Animator.StringToHash("Jump"));
                 playerAnimator.SetTrigger("jump");
             }
             //onrelease jump button
@@ -144,13 +120,16 @@ public class PlayerMovement : MonoBehaviour
 
     private void PlayJumpSound()
     {
-        if (jumpSound != null && audioSource != null)
+        // Check if there are any jump sounds and audio source is assigned
+        if (jumpSounds != null && jumpSounds.Length > 0 && audioSource != null)
         {
-            audioSource.PlayOneShot(jumpSound, jumpVolume);
+            // Select a random jump sound from the array
+            AudioClip randomJumpSound = jumpSounds[UnityEngine.Random.Range(0, jumpSounds.Length)];
+            audioSource.PlayOneShot(randomJumpSound, jumpVolume);
         }
         else
         {
-            Debug.LogWarning("Jump sound or audio source not assigned!");
+            Debug.LogWarning("No jump sounds assigned or audio source missing!");
         }
     }
 
@@ -159,10 +138,8 @@ public class PlayerMovement : MonoBehaviour
         if (Physics2D.OverlapBox(groundCheckPosition.position, groundCheckSize, 0, groundLayer))
         {
             jumpsRemaining = maxJumps;
-
-            //print("onground");
         }
-        else//if("player has double jump ability or something")
+        else
         {
             jumpsRemaining = 0;
             if (rigidBody.linearVelocity.y < fallAnimThreshold)
@@ -187,21 +164,17 @@ public class PlayerMovement : MonoBehaviour
             }
             
             transform.localScale = ls;
-            //this.transform.localScale.x *= -1f;
         }
         else 
         { 
             return; 
         }
-
     }
     
     private void OnDrawGizmos()
     {
         //Ground checker
         Gizmos.DrawWireCube(groundCheckPosition.position, groundCheckSize);
-        //Gizmos.DrawCube(mousePosRound+ new Vector3(0.5f, -0.5f, 0f), new Vector3(0.1f, 0.1f, 0.01f));//mouse block check
-        //Gizmos.DrawCube(mousePos, new Vector3(0.2f, 0.2f, 0.01f));//mouse block check
         Gizmos.DrawWireCube(transform.position, new Vector3(0.01f, 0.01f, 0.01f));//mouse block check
     }
 }
