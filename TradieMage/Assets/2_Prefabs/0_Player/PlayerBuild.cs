@@ -312,7 +312,8 @@ public class PlayerBuild : MonoBehaviour
                 mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
                 //Debug.Log(boxCosts[selectedBox]);
 
-                playerAnimator.Play(Animator.StringToHash("Build"));
+                //playerAnimator.Play(Animator.StringToHash("Build"));
+                playerAnimator.SetTrigger("build");
 
                 // Play build sound
                 if (buildSound != null && audioSource != null)
@@ -353,7 +354,8 @@ public class PlayerBuild : MonoBehaviour
             mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
             mouseScript.updateOutOfMana();
 
-            playerAnimator.Play(Animator.StringToHash("Destroy"));
+            //playerAnimator.Play(Animator.StringToHash("Destroy"));
+            playerAnimator.SetTrigger("destroy");
         }
     }
 

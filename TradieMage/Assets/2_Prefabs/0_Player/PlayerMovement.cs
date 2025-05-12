@@ -87,7 +87,7 @@ public class PlayerMovement : MonoBehaviour
 
 
         UpdateHUD();
-
+        playerAnimator.SetFloat("magnitude", rigidBody.linearVelocity.magnitude);
     }
 
     public void FixedUpdate()
@@ -130,7 +130,8 @@ public class PlayerMovement : MonoBehaviour
 
                 //play jump sound
                 PlayJumpSound();
-                playerAnimator.Play(Animator.StringToHash("Jump"));
+                //playerAnimator.Play(Animator.StringToHash("Jump"));
+                playerAnimator.SetTrigger("jump");
             }
             //onrelease jump button
             else if (context.canceled)
