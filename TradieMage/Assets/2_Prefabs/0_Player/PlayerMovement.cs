@@ -39,6 +39,10 @@ public class PlayerMovement : MonoBehaviour
     [Header("HUD")]
     public TMP_Text selectedBoxHUDText;
 
+    [Header("Animation")]
+    public Animator playerAnimator;
+    private SpriteRenderer playerSprite;
+    public float fallAnimThreshold = 1f;
 
     [Header("Debug")]
     public TMP_Text coords;
@@ -56,6 +60,9 @@ public class PlayerMovement : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerAnimator = GetComponentInChildren<Animator>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
+
         // Get or add AudioSource component
         if (audioSource == null)
         {
@@ -101,6 +108,11 @@ public class PlayerMovement : MonoBehaviour
         if (horizontalMovement != 0)
         {
             SetFacingDirection(horizontalMovement);
+            playerAnimator.Play(Animator.StringToHash("Walk"));
+        }
+        else
+        {
+            playerAnimator.Play(Animator.StringToHash("Idle"));
         }
         //Debug.Log(horizontalMovement);
     }
@@ -118,6 +130,7 @@ public class PlayerMovement : MonoBehaviour
 
                 //play jump sound
                 PlayJumpSound();
+                playerAnimator.Play(Animator.StringToHash("Jump"));
             }
             //onrelease jump button
             else if (context.canceled)
@@ -151,6 +164,10 @@ public class PlayerMovement : MonoBehaviour
         else//if("player has double jump ability or something")
         {
             jumpsRemaining = 0;
+            if (rigidBody.linearVelocity.y < fallAnimThreshold)
+            {
+                playerAnimator.Play(Animator.StringToHash("Fall"));
+            }
         }
     }
 

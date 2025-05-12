@@ -211,6 +211,7 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 128
   selectedBoxHUDText: {fileID: 0}
+  playerAnimator: {fileID: 0}
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
   coordsPlayer: {fileID: 0}
@@ -406,6 +407,7 @@ MonoBehaviour:
   soundVolume: 0.7
   destroyEffectPrefab: {fileID: 0}
   selectedBoxHUDText: {fileID: 0}
+  playerAnimator: {fileID: 0}
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
   coordsPlayer: {fileID: 0}
@@ -522,7 +524,7 @@ Transform:
   m_GameObject: {fileID: 6487580774522968158}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -0.125, y: 0.38, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children: []

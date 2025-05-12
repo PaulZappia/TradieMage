@@ -64,6 +64,9 @@ public class PlayerBuild : MonoBehaviour
     [Header("HUD")]
     public TMP_Text selectedBoxHUDText;
 
+    [Header("Animation")]
+    public Animator playerAnimator;
+    private SpriteRenderer playerSprite;
 
     [Header("Debug")]
     public TMP_Text coords;
@@ -81,6 +84,8 @@ public class PlayerBuild : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
+        playerAnimator = GetComponentInChildren<Animator>();
+        playerSprite = GetComponentInChildren<SpriteRenderer>();
         //boxLayer = this.GetComponent<>
         //mouseScript = mouseObject.GetComponent<Mouse>();
         setBuildRadiusExtended(isRangeExtended);
@@ -306,7 +311,9 @@ public class PlayerBuild : MonoBehaviour
                 mana -= boxCosts[selectedBox];
                 mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
                 //Debug.Log(boxCosts[selectedBox]);
-                
+
+                playerAnimator.Play(Animator.StringToHash("Build"));
+
                 // Play build sound
                 if (buildSound != null && audioSource != null)
                 {
@@ -345,6 +352,8 @@ public class PlayerBuild : MonoBehaviour
             // Update UI
             mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
             mouseScript.updateOutOfMana();
+
+            playerAnimator.Play(Animator.StringToHash("Destroy"));
         }
     }
 
