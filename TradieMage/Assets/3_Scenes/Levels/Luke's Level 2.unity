@@ -726,6 +726,14 @@ PrefabInstance:
       propertyPath: destination
       value: 
       objectReference: {fileID: 407447962}
+    - target: {fileID: 6500124962380472088, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 21.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6500124962380472088, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 8427145725719892771, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_Name
       value: Top Teleporter
