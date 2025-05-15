@@ -10,12 +10,12 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 13b75c95f34a00d4e8c04f76b73312e6, type: 3}
-  m_Name: AnimatedDecorativeTiles 6
+  m_Name: AnimatedDecorativeTiles 8
   m_EditorClassIdentifier: 
   m_AnimatedSprites:
-  - {fileID: -1052313725, guid: 6a421c043bc161044b4b38f341adc71c, type: 3}
-  - {fileID: 1350770950, guid: 6a421c043bc161044b4b38f341adc71c, type: 3}
-  - {fileID: 2052947146, guid: 6a421c043bc161044b4b38f341adc71c, type: 3}
+  - {fileID: 1394772864, guid: 6a421c043bc161044b4b38f341adc71c, type: 3}
+  - {fileID: -554764352, guid: 6a421c043bc161044b4b38f341adc71c, type: 3}
+  - {fileID: 1817332733, guid: 6a421c043bc161044b4b38f341adc71c, type: 3}
   m_MinSpeed: 1
   m_MaxSpeed: 1.2
   m_AnimationStartTime: 0
