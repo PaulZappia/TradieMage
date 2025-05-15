@@ -783,6 +783,10 @@ PrefabInstance:
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: jumpVolume
+      value: 0.457
+      objectReference: {fileID: 0}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
       propertyPath: coordsRound
       value: 
       objectReference: {fileID: 0}
@@ -807,9 +811,37 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 0}
     - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: jumpSounds.Array.size
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
       propertyPath: boxTypeNames.Array.size
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: 'jumpSounds.Array.data[0]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 1f04790a47f6a4b7f815bfec71f356d4, type: 3}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: 'jumpSounds.Array.data[1]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 841f700897f77564ab8340b69bf3ec88, type: 3}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: 'jumpSounds.Array.data[2]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 93bc2c455c914e74a9a4a437ecd13e65, type: 3}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: 'jumpSounds.Array.data[3]'
+      value: 
+      objectReference: {fileID: 8300000, guid: a8d691ee4bf09674eb77e98c4f42fa0e, type: 3}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: 'jumpSounds.Array.data[4]'
+      value: 
+      objectReference: {fileID: 8300000, guid: 4f1f7a5113179f2429855efe8116fa6f, type: 3}
+    - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
+      propertyPath: 'jumpSounds.Array.data[5]'
+      value: 
+      objectReference: {fileID: 8300000, guid: fea476a6c05da984f84d3139086414bb, type: 3}
     - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
       propertyPath: 'boxTypeNames.Array.data[0]'
       value: ' Wooden Box'
