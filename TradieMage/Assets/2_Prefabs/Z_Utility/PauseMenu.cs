@@ -22,6 +22,7 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
+        //TODO make sure not in main menu
         pauseMenu.SetActive(true);
         Time.timeScale = 0;
     }
@@ -35,6 +36,7 @@ public class PauseMenu : MonoBehaviour
     public void Restart()
     {
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
     public void Options()
@@ -44,6 +46,7 @@ public class PauseMenu : MonoBehaviour
     public void MainMenu()
     {
         SceneManager.LoadScene("MainMenu");
+        pauseMenu.SetActive(false);
         Time.timeScale = 1;
     }
 

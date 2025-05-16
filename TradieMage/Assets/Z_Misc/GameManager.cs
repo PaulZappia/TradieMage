@@ -74,7 +74,15 @@ public class GameManager : MonoBehaviour
         // Add any game-wide update logic here
         if (Input.GetKeyDown(KeyCode.P))
         {
-            pauseMenu.GetComponent<PauseMenu>().Pause();
+            if (pauseMenu.GetComponent<PauseMenu>().isActiveAndEnabled)
+            {
+                pauseMenu.GetComponent<PauseMenu>().Resume();
+            }
+            else
+            {
+                pauseMenu.GetComponent<PauseMenu>().Pause();
+            }
+            
         }
     }
     
