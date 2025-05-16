@@ -10,11 +10,14 @@ public class GameManager : MonoBehaviour
     [Header("Scene Management")]
     public List<string> sceneNameList = new List<string>();
     public int currentSceneIndex = 0;
-    
-    [Header("Game State")]
-    public bool gameIsPaused = false;
-    public int playerScore = 0;
-    
+
+    //[Header("Game State")]
+    //public bool gameIsPaused = false;
+    //public int playerScore = 0;
+
+    [Header("Pause Menu")]
+    public Canvas pauseMenu;
+
     // Track if colors are currently inverted
     private bool _colorsInverted = false;
     public bool ColorsInverted 
@@ -47,22 +50,32 @@ public class GameManager : MonoBehaviour
         {
             Destroy(gameObject);
         }
+
+        DontDestroyOnLoad(pauseMenu.gameObject);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         // Load initial scene if not already in it
-        if (SceneManager.GetActiveScene().name != sceneNameList[currentSceneIndex])
-        {
-            SceneManager.LoadScene(sceneNameList[currentSceneIndex]);
-        }
+        //if (SceneManager.GetActiveScene().name != sceneNameList[currentSceneIndex])
+        //{
+        //    SceneManager.LoadScene(sceneNameList[currentSceneIndex]);
+        //}
+
+        //LoadScene main menu
+        SceneManager.LoadScene("MainMenu");
+
     }
 
     // Update is called once per frame
     void Update()
     {
         // Add any game-wide update logic here
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            pauseMenu.GetComponent<PauseMenu>().Pause();
+        }
     }
     
     // Method to change scenes
