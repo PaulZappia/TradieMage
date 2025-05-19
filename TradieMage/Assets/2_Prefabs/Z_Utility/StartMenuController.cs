@@ -8,6 +8,13 @@ public class StartMenuController : MonoBehaviour
 
     public GameObject optionsMenu;
 
+    private void Start()
+    {
+        //GameManager.optionsMenu = GetComponent<Canvas>();
+        optionsMenu = GameObject.Find("StartMenuController");
+    }
+
+
     public void OnStartClick()
     {
         SceneManager.LoadScene(StartLevel); //load first level here or intro cutscene
@@ -15,7 +22,8 @@ public class StartMenuController : MonoBehaviour
 
     public void Options()
     {
-        optionsMenu.SetActive(true);
+        //gameObject.SetActive(false);
+        //GameObject.Find("StartMenuController").optionsMenu.SetActive(true);
     }
 
     public  void OnClickExit()

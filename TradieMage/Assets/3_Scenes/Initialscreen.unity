@@ -469,6 +469,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 4620190022227602829, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
+      propertyPath: pauseMenu
+      value: 
+      objectReference: {fileID: 964267558}
     - target: {fileID: 5553073481883468217, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
       propertyPath: m_Name
       value: OptionsMenu
@@ -516,6 +520,11 @@ Canvas:
   m_CorrespondingSourceObject: {fileID: 3390285305443936596, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
   m_PrefabInstance: {fileID: 907843670}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &964267558 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 5553073481883468217, guid: 5abe61489ec56424c87e326fdd21646a, type: 3}
+  m_PrefabInstance: {fileID: 365428104}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1762587071
 GameObject:
   m_ObjectHideFlags: 0
@@ -525,7 +534,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1762587073}
-  - component: {fileID: 1762587072}
+  - component: {fileID: 1762587074}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -533,22 +542,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1762587072
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1762587071}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 385a73516bdd3463cb088e79f1e21570, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  sceneNameList: []
-  currentSceneIndex: 0
-  pauseMenu: {fileID: 365428105}
-  optionsMenu: {fileID: 907843672}
 --- !u!4 &1762587073
 Transform:
   m_ObjectHideFlags: 0
@@ -564,6 +557,22 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1762587074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1762587071}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 385a73516bdd3463cb088e79f1e21570, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  sceneNameList: []
+  currentSceneIndex: 0
+  pauseMenu: {fileID: 365428105}
+  optionsMenu: {fileID: 907843672}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
