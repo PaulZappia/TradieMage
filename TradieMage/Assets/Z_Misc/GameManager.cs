@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
 
     [Header("Pause Menu")]
     public Canvas pauseMenu;
+    [Header("Options Menu")]
+    public Canvas optionsMenu;
 
     // Track if colors are currently inverted
     private bool _colorsInverted = false;
@@ -52,6 +54,7 @@ public class GameManager : MonoBehaviour
         }
 
         DontDestroyOnLoad(pauseMenu.gameObject);
+        DontDestroyOnLoad(optionsMenu.gameObject);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created

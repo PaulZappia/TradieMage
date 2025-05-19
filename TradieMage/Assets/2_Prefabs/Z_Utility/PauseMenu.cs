@@ -5,8 +5,9 @@ public class PauseMenu : MonoBehaviour
 {
    
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject optionsMenu;
 
-    
+
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
@@ -22,9 +23,13 @@ public class PauseMenu : MonoBehaviour
 
     public void Pause()
     {
-        //TODO make sure not in main menu
-        pauseMenu.SetActive(true);
-        Time.timeScale = 0;
+        //make sure not in main menu
+        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("MainMenu"))
+        {
+            pauseMenu.SetActive(true);
+            Time.timeScale = 0;
+        }
+        
     }
 
     public void Resume()
@@ -41,6 +46,8 @@ public class PauseMenu : MonoBehaviour
     }
     public void Options()
     {
+        pauseMenu.SetActive(false);
+        optionsMenu.SetActive(true);
 
     }
     public void MainMenu()

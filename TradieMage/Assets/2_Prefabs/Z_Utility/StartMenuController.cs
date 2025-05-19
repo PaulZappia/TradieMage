@@ -5,9 +5,17 @@ public class StartMenuController : MonoBehaviour
 {
     public string StartLevel = "TestLevel1";
 
-   public void OnStartClick()
+
+    public GameObject optionsMenu;
+
+    public void OnStartClick()
     {
         SceneManager.LoadScene(StartLevel); //load first level here or intro cutscene
+    }
+
+    public void Options()
+    {
+        optionsMenu.SetActive(true);
     }
 
     public  void OnClickExit()
