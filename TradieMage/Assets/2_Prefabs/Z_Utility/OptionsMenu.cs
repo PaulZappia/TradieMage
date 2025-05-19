@@ -47,7 +47,13 @@ public class OptionsMenu : MonoBehaviour
             optionsMenu.SetActive(false);
 
         }
-        
+        else
+        {
+            pauseMenu.SetActive(true);
+            optionsMenu.SetActive(false);
+        }
+       
+
     }
 
 
