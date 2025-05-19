@@ -22,6 +22,8 @@ public class OptionsMenu : MonoBehaviour
     void Start()
     {
         optionsMenu.SetActive(false);
+        SetMusicVolume();
+        SetSoundVolume();
     }
 
     // Update is called once per frame
