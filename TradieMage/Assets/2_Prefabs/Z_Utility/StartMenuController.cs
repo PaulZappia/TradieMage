@@ -1,17 +1,21 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
+
 public class StartMenuController : MonoBehaviour
 {
     public string StartLevel = "TestLevel1";
 
-
-    public GameObject optionsMenu;
+    public GameManager GM;
+    public Canvas optionsMenu;
+    public Canvas optionsCanvas;
 
     private void Start()
     {
-        //GameManager.optionsMenu = GetComponent<Canvas>();
-        optionsMenu = GameObject.Find("StartMenuController");
+        GM = GameObject.Find("GameManager").GetComponent<GameManager>();
+        //GM.optionsMenu = GetComponent<Canvas>();
+        //optionsMenu = GM.optionsMenu;
+        //optionsCanvas = optionsMenu.GetComponent<Canvas>();
     }
 
 
@@ -23,7 +27,10 @@ public class StartMenuController : MonoBehaviour
     public void Options()
     {
         //gameObject.SetActive(false);
-        //GameObject.Find("StartMenuController").optionsMenu.SetActive(true);
+        //optionsMenu.enabled = true;
+        //GameObject.Find("StartMenuController").optionsMenu.gameObject.SetActive(true);
+        GM.setOptionsMenu(true);
+        //Debug.Log(optionsMenu.enabled);
     }
 
     public  void OnClickExit()

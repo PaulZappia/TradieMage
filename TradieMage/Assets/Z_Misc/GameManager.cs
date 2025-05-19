@@ -16,9 +16,9 @@ public class GameManager : MonoBehaviour
     //public int playerScore = 0;
 
     [Header("Pause Menu")]
-    public Canvas pauseMenu;
+    public GameObject pauseMenu;
     [Header("Options Menu")]
-    public Canvas optionsMenu;
+    public GameObject optionsMenu;
 
     // Track if colors are currently inverted
     private bool _colorsInverted = false;
@@ -66,6 +66,11 @@ public class GameManager : MonoBehaviour
         //    SceneManager.LoadScene(sceneNameList[currentSceneIndex]);
         //}
 
+        pauseMenu.SetActive(false);
+        optionsMenu.SetActive(false);
+
+
+
         //LoadScene main menu
         SceneManager.LoadScene("MainMenu");
 
@@ -89,6 +94,12 @@ public class GameManager : MonoBehaviour
         }
     }
     
+    public void setOptionsMenu(bool set)
+    {
+        optionsMenu.SetActive(set);
+        //Debug.Log(optionsMenu.isAc);
+    }
+
     // Method to change scenes
     public void LoadScene(string sceneName)
     {

@@ -259,6 +259,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: PauseMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5553073481883468217, guid: 5abe61489ec56424c87e326fdd21646a, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6570889235409521815, guid: 5abe61489ec56424c87e326fdd21646a, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -284,11 +288,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 5abe61489ec56424c87e326fdd21646a, type: 3}
---- !u!223 &365428105 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 3390285305443936596, guid: 5abe61489ec56424c87e326fdd21646a, type: 3}
-  m_PrefabInstance: {fileID: 365428104}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &907843670
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -477,6 +476,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: OptionsMenu
       objectReference: {fileID: 0}
+    - target: {fileID: 5553073481883468217, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6899462354651713406, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -513,11 +516,6 @@ PrefabInstance:
 --- !u!1 &907843671 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 5553073481883468217, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
-  m_PrefabInstance: {fileID: 907843670}
-  m_PrefabAsset: {fileID: 0}
---- !u!223 &907843672 stripped
-Canvas:
-  m_CorrespondingSourceObject: {fileID: 3390285305443936596, guid: 9d5f9c02b0849ae4291b53b3c693ceb0, type: 3}
   m_PrefabInstance: {fileID: 907843670}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &964267558 stripped
@@ -571,8 +569,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   sceneNameList: []
   currentSceneIndex: 0
-  pauseMenu: {fileID: 365428105}
-  optionsMenu: {fileID: 907843672}
+  pauseMenu: {fileID: 964267558}
+  optionsMenu: {fileID: 907843671}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0

@@ -16,10 +16,14 @@ public class OptionsMenu : MonoBehaviour
     [SerializeField] private Slider musicSlider;
     [SerializeField] private Slider soundSlider;
 
+    private int volumeMulti = 20;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         optionsMenu.SetActive(false);
+        SetMusicVolume();
+        SetSoundVolume();
     }
 
     // Update is called once per frame
@@ -31,13 +35,13 @@ public class OptionsMenu : MonoBehaviour
     public void SetMusicVolume()
     {
         float volume = musicSlider.value;
-        myMixer.SetFloat("bgm", volume);
+        myMixer.SetFloat("bgm", Mathf.Log10(volume)* volumeMulti);
     }
 
     public void SetSoundVolume()
     {
         float volume = soundSlider.value;
-        myMixer.SetFloat("sfx", volume);
+        myMixer.SetFloat("sfx", Mathf.Log10(volume) * volumeMulti);
     }
 
     public void Back()
@@ -47,7 +51,13 @@ public class OptionsMenu : MonoBehaviour
             optionsMenu.SetActive(false);
 
         }
-        
+        else
+        {
+            pauseMenu.SetActive(true);
+            optionsMenu.SetActive(false);
+        }
+       
+
     }
 
 
