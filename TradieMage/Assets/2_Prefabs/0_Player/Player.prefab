@@ -200,7 +200,7 @@ MonoBehaviour:
   jumpPower: 10
   maxJumps: 1
   audioSource: {fileID: 0}
-  jumpSound: {fileID: 0}
+  jumpSounds: []
   jumpVolume: 0.7
   groundCheckPosition: {fileID: 1684406243467247329}
   groundCheckSize: {x: 0.5, y: 0.05}
@@ -212,6 +212,7 @@ MonoBehaviour:
     m_Bits: 128
   selectedBoxHUDText: {fileID: 0}
   playerAnimator: {fileID: 0}
+  fallAnimThreshold: 1
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
   coordsPlayer: {fileID: 0}
@@ -573,7 +574,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
+  m_SortingOrder: 622
   m_Sprite: {fileID: 1125317963, guid: 198fb0d906270d540a71ddc9edc09378, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
