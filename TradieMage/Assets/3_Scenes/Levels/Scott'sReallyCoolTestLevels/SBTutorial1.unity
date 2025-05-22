@@ -14203,19 +14203,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[0]'
-      value: Welcome Tradie Mage. Click to continue
+      value: 'Welcome, Tradie Mage! Click to continue. '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: You can move with WASD or Arrow Keys.
+      value: 'You can move with WASD or the Arrow Keys. '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: Press Space to jump.
+      value: 'Press Space to jump! '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[3]'
-      value: Collect the Letter or Recommendation at the end.
+      value: 'Collect the Letter of Recommendation to complete the level! '
       objectReference: {fileID: 0}
     - target: {fileID: 6080027368974907721, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: m_Name

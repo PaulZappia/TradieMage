@@ -8,15 +8,20 @@ public class PlayerTeleporter : MonoBehaviour
     public LayerMask TeleportLayer;
     public Vector2 TeleportCollider = new Vector2(1.5f, 1.5f);
     private GameObject currentTeleporter;
+    public ParticleSystem teleportEffect;
+    
+    
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            currentTeleporter = Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer).gameObject;
+            currentTeleporter = Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer).gameObject.GetComponentInParent<Teleporter>().gameObject;
+
             if (currentTeleporter != null)
             //if (Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer))
             {
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
+                teleportEffect.Play();
             }
         }
     }

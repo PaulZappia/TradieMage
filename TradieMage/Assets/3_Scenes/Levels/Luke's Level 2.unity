@@ -268,6 +268,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Bottom Teleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 2774551726474106044, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 1905401330}
     - target: {fileID: 6105040313413754561, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: destination
       value: 
@@ -281,6 +285,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+--- !u!4 &665710916 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+  m_PrefabInstance: {fileID: 665710915}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &691461521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -617,6 +626,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Top Teleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 2774551726474106044, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 665710916}
     - target: {fileID: 6105040313413754561, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: destination
       value: 
@@ -638,6 +651,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+--- !u!4 &1905401330 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+  m_PrefabInstance: {fileID: 1905401329}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1218003749713760419
 Transform:
   m_ObjectHideFlags: 0
