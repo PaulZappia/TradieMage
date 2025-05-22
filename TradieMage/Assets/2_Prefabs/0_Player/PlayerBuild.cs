@@ -119,15 +119,6 @@ public class PlayerBuild : MonoBehaviour
     {
         
         HandleInputs();
-        /*
-        if (jumpTimer > 0)
-        {
-            jumpTimer--;
-        }
-        */
-        //GroundCheck();
-
-        
 
         //cycle boxes
         if (Input.GetKeyDown(KeyCode.E))
@@ -167,10 +158,6 @@ public class PlayerBuild : MonoBehaviour
         }
 
 
-        //flip sprite
-        //if (Mathf.Sign(rigidBody.linearVelocity.x) != 0) 
-        //    SetFacingDirection(Mathf.Sign(rigidBody.linearVelocity.x));
-
         mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
         
 
@@ -178,10 +165,6 @@ public class PlayerBuild : MonoBehaviour
         RoundMouseCoords();
         UpdateHUD();
 
-
-        
-        
-        
 
     }
 
