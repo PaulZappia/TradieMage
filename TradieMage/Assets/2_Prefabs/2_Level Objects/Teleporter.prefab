@@ -135,6 +135,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
+  idleParticles: {fileID: 6837662579342546075}
 --- !u!61 &5778173863565140885
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -233,6 +234,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: TeleportIdle
       objectReference: {fileID: 0}
+    - target: {fileID: 5283388587032726529, guid: 908541067568b7544a9c263d6f54e912, type: 3}
+      propertyPath: prewarm
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -241,5 +246,10 @@ PrefabInstance:
 --- !u!4 &1894634843009091959 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1007966667460006381, guid: 908541067568b7544a9c263d6f54e912, type: 3}
+  m_PrefabInstance: {fileID: 1708583955286055066}
+  m_PrefabAsset: {fileID: 0}
+--- !u!198 &6837662579342546075 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5283388587032726529, guid: 908541067568b7544a9c263d6f54e912, type: 3}
   m_PrefabInstance: {fileID: 1708583955286055066}
   m_PrefabAsset: {fileID: 0}
