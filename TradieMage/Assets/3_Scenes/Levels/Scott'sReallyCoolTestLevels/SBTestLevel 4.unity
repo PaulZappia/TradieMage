@@ -704,6 +704,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2774551726474106044, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 1998822392}
     - target: {fileID: 6105040313413754561, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: destination
       value: 
@@ -914,6 +918,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter
       objectReference: {fileID: 0}
+    - target: {fileID: 2774551726474106044, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 1647525316}
     - target: {fileID: 6105040313413754561, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: destination
       value: 

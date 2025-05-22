@@ -15,7 +15,8 @@ public class PlayerTeleporter : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.W))
         {
-            currentTeleporter = Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer).gameObject;
+            currentTeleporter = Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer).gameObject.GetComponentInParent<Teleporter>().gameObject;
+
             if (currentTeleporter != null)
             //if (Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer))
             {
