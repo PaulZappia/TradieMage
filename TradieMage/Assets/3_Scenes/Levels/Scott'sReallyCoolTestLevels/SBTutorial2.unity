@@ -14203,19 +14203,23 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[0]'
-      value: 'Welcome, Tradie Mage! Click to continue. '
+      value: 'You have the ability to SUMMON BOXES!!! You can do this by clicking
+        near you, Tradie Mage! '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: 'You can move with WASD or the Arrow Keys. '
+      value: 'The cursor will turn red if it is out of range or will turn grey if
+        you are out of mana. '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: 'Press Space to jump! '
+      value: "Oh, I forgot to mention... summoning blocks requires mana! What is
+        mana, you may ask? Well... it\u2019s mana! "
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[3]'
-      value: 'Collect the Letter of Recommendation to complete the level! '
+      value: 'You can retrieve mana from blocks in the world by right-clicking them,
+        unsummoning them and regenerating the mana back into your bar. '
       objectReference: {fileID: 0}
     - target: {fileID: 6080027368974907721, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: m_Name

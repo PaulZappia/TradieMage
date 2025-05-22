@@ -14199,23 +14199,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: lines.Array.size
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[0]'
-      value: 'Welcome, Tradie Mage! Click to continue. '
+      value: 'You can cycle through the types of blocks you can summon by pressing
+        Q or E. '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[1]'
-      value: 'You can move with WASD or the Arrow Keys. '
+      value: 'Speaking of block types, one of these is the metal block! Metal blocks
+        can float in the air, but they cost more mana, so use them wisely. '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: 'Press Space to jump! '
+      value: 'You can retrieve mana from blocks in the world by right-clicking them,
+        unsummoning them and regenerating the mana back into your bar. '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[3]'
-      value: 'Collect the Letter of Recommendation to complete the level! '
+      value: 'You can retrieve mana from blocks in the world by right-clicking them,
+        unsummoning them and regenerating the mana back into your bar. '
       objectReference: {fileID: 0}
     - target: {fileID: 6080027368974907721, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: m_Name
