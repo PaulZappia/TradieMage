@@ -31,6 +31,7 @@ public class SwitchingBlock : SwitchEnum
         switchControllerScript = switchController.GetComponent<SwitchController>();
         switchControllerScript.gameObjects.Add(gameObject);
         ToggleBlock(switchControllerScript.isSwitchActive);
+        
     }
 
     public void ToggleBlock(bool state)
@@ -47,7 +48,7 @@ public class SwitchingBlock : SwitchEnum
     }
     private void Update()
     {
-
+        
     }
 
 }

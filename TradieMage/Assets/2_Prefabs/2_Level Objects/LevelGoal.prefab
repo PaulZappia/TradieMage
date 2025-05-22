@@ -78,7 +78,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: -1
+  m_SortingOrder: 550
   m_Sprite: {fileID: 5167228247155256966, guid: 14c53bcff4bb5e1439503f4e4b71b233, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
@@ -148,9 +148,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32c6e1ad4ecefd24a94ff4c78391b9fe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  levelName: 
-  isLevelFinished: 0
-  endTimer: 5
+  nextLevelName: 
+  transitionDelay: 5
+  completionEffect: {fileID: 0}
 --- !u!1001 &1448541575981521677
 PrefabInstance:
   m_ObjectHideFlags: 0

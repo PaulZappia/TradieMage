@@ -20,6 +20,9 @@ public class GameManager : MonoBehaviour
     [Header("Options Menu")]
     public GameObject optionsMenu;
 
+    public static GameObject player = null;
+
+
     // Track if colors are currently inverted
     private bool _colorsInverted = false;
     public bool ColorsInverted 

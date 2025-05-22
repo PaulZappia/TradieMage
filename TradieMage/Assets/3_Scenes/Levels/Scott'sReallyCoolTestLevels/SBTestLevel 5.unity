@@ -449,6 +449,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 2333294049563753064, guid: daedfebfe2e0b3643b2fcf741111dc45, type: 3}
+      propertyPath: isActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2333294049563753064, guid: daedfebfe2e0b3643b2fcf741111dc45, type: 3}
+      propertyPath: invertBlocks
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 5568142260525572797, guid: daedfebfe2e0b3643b2fcf741111dc45, type: 3}
       propertyPath: m_Name
       value: SwitchController
@@ -5774,27 +5782,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[0].second.m_AnimationSpeed
-      value: 1.1902796
+      value: 1.0906692
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[1].second.m_AnimationSpeed
-      value: 1.1262743
+      value: 1.0305836
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[2].second.m_AnimationSpeed
-      value: 1.0067152
+      value: 1.026933
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[3].second.m_AnimationSpeed
-      value: 1.0918515
+      value: 1.0299098
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[4].second.m_AnimationSpeed
-      value: 1.0792551
+      value: 1.0888703
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_AnimatedTiles.Array.data[5].second.m_AnimationSpeed
-      value: 1.0568027
+      value: 1.0944479
       objectReference: {fileID: 0}
     - target: {fileID: 3268053714033908225, guid: 63f085067c0c3514f8e7e9b848fbdda2, type: 3}
       propertyPath: m_Tiles.Array.data[0].second.m_TileObjectToInstantiateIndex

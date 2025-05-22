@@ -6,7 +6,7 @@ public class PauseMenu : MonoBehaviour
    
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject optionsMenu;
-
+    public GameObject player;
 
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -24,7 +24,9 @@ public class PauseMenu : MonoBehaviour
     public void Pause()
     {
         //make sure not in main menu
-        if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("MainMenu"))
+        
+        //if (SceneManager.GetActiveScene() != SceneManager.GetSceneByName("MainMenu"))
+        if (GameManager.player != null)
         {
             pauseMenu.SetActive(true);
             Time.timeScale = 0;
