@@ -196,7 +196,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rigidBody: {fileID: 708413264108602211}
-  moveSpeed: 5
+  moveSpeed: 5.5
   jumpPower: 10
   maxJumps: 1
   audioSource: {fileID: 0}

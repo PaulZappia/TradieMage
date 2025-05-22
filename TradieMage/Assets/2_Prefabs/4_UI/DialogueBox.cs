@@ -31,6 +31,7 @@ public class DialogueBox : MonoBehaviour
             }
             else
             {
+                //StopCoroutine("TypeLine");
                 StopAllCoroutines();
                 textComponent.text = lines[index];
             }
