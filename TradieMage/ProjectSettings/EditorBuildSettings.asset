@@ -44,6 +44,9 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTestLevel 4.unity
     guid: 276852c8a1b19854d81b80da7b972ad1
+  - enabled: 1
+    path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTutorial1.unity
+    guid: 83b8b665822b18f42b676dbf86447894
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

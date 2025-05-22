@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65c4124d7f2e684497f1acf43d1df99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLevel: TestLevel1
+  StartLevel: SBTutorial1
   GM: {fileID: 0}
   optionsMenu: {fileID: 0}
   optionsCanvas: {fileID: 0}

@@ -167,6 +167,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3743365624939397983, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
+      propertyPath: nextLevelName
+      value: TestLevel1
+      objectReference: {fileID: 0}
     - target: {fileID: 3747553174451346715, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
       propertyPath: m_Name
       value: LevelGoal
@@ -655,7 +659,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 289927665378079086, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
       propertyPath: mana
-      value: 3
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 876230760992256056, guid: 30243de3c28e2ff4b89db3a6ad053759, type: 3}
       propertyPath: coords
