@@ -47,6 +47,18 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTutorial1.unity
     guid: 83b8b665822b18f42b676dbf86447894
+  - enabled: 1
+    path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTutorial2.unity
+    guid: dd76b39a7379d9c4fb8a0b157de1a0f3
+  - enabled: 1
+    path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTutorial3.unity
+    guid: 037ca3cb8cdf36048854927243cfe4b1
+  - enabled: 1
+    path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTutorial4.unity
+    guid: 24d07093bf3c1d24fa6790d8681f960a
+  - enabled: 1
+    path: Assets/3_Scenes/Levels/Scott'sReallyCoolTestLevels/SBTutorial5.unity
+    guid: 589f184f0d62bb14dbb7f67030e45059
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}
   m_UseUCBPForAssetBundles: 0

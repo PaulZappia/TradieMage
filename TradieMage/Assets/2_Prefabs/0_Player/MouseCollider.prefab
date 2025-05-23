@@ -75,7 +75,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 20
+  m_SortingOrder: 920
   m_Sprite: {fileID: 5167228247155256966, guid: c9cd01de86a84d74c8f38e4d135fc7d2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.39215687}
   m_FlipX: 0
@@ -175,6 +175,7 @@ MonoBehaviour:
   highlightRenderer: {fileID: 6350312566770438930}
   defaultColour: {r: 0, g: 0, b: 0, a: 0}
   inRange: 0
+  isOutOfMana: 0
   blockSprites:
   - {fileID: 5167228247155256966, guid: 0209114c991cca749aa4dbe9ae4e0aee, type: 3}
   - {fileID: 5167228247155256966, guid: 42f23def9499ae840803c873d4e09a03, type: 3}
@@ -262,7 +263,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 10
+  m_SortingOrder: 910
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 0.2901961}
   m_FlipX: 0
