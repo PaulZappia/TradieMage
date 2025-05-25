@@ -151,6 +151,7 @@ MonoBehaviour:
   nextLevelName: 
   transitionDelay: 5
   completionEffect: {fileID: 0}
+  levelTransition: {fileID: 6598265012002008709, guid: f282ea00418d23d459b8da9e5c744311, type: 3}
 --- !u!1001 &1448541575981521677
 PrefabInstance:
   m_ObjectHideFlags: 0

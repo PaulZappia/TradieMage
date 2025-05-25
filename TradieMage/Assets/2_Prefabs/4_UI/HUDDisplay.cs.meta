@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: 279f7d4464e3b954fa268cd79f032611
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - emptyMana: {fileID: 21300000, guid: 60587c0d91480ed45bd140ba9a57cfc5, type: 3}
+  - fullMana: {fileID: 21300000, guid: 326bf4b33157e414dbd0de40bd4a82fb, type: 3}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
