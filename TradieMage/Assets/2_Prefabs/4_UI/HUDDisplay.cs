@@ -8,6 +8,7 @@ public class HUDDisplay : MonoBehaviour
 
     [Header("Camera")]
     public Camera mainCamera;
+    public Canvas canvas;
 
     // Player Reference
     private PlayerBuild player;
@@ -27,9 +28,15 @@ public class HUDDisplay : MonoBehaviour
 
     private void Awake()
     {
+        canvas = GetComponent<Canvas>();
         mainCamera = GameObject.FindWithTag("MainCamera").GetComponent<Camera>();
         player = GameObject.FindWithTag("Player").GetComponent<PlayerBuild>();
         mana = player.mana;
+    }
+
+    private void Start()
+    {
+        canvas.worldCamera = mainCamera;
     }
 
     // Update is called once per frame

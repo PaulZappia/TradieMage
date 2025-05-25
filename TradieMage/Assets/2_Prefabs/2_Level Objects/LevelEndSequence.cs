@@ -1,5 +1,6 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class LevelEndSequence : MonoBehaviour
 {
@@ -7,13 +8,20 @@ public class LevelEndSequence : MonoBehaviour
     [SerializeField] private string nextLevelName;
 
     [Tooltip("Time to wait before loading the next level")]
-    [SerializeField] private float transitionDelay = 5f;
+    [SerializeField] private float transitionDelay = 3f;
 
     [Tooltip("Reference to the particle system (optional)")]
     [SerializeField] private ParticleSystem completionEffect;
 
+    [SerializeField] private GameObject levelTransition;
+
     private bool isTriggered = false;
+    private bool loadTriggered = false;
+    private bool transitionTriggered = false;
+    
     private float timer;
+
+    AsyncOperation asyncLoad;
 
     private void Awake()
     {
@@ -48,6 +56,12 @@ public class LevelEndSequence : MonoBehaviour
         // Only run the timer logic if the sequence has been triggered
         if (isTriggered)
         {
+            if (!loadTriggered)
+            {
+                StartCoroutine(AsyncLoadScene());
+                loadTriggered = true;
+            }
+            
             if (timer > 0)
             {
                 timer -= Time.deltaTime;
@@ -60,9 +74,40 @@ public class LevelEndSequence : MonoBehaviour
                     Debug.LogWarning("No next level name specified!");
                     return;
                 }
-
-                SceneManager.LoadScene(nextLevelName);
+                if (!transitionTriggered)
+                {
+                    StartCoroutine(TransitionLevel());
+                    transitionTriggered = true;
+                    return;
+                }                
             }
         }
     }
+
+    IEnumerator AsyncLoadScene()
+    {
+        
+        asyncLoad = SceneManager.LoadSceneAsync(nextLevelName);
+        asyncLoad.allowSceneActivation = false;
+
+        while (asyncLoad.progress < 0.99f)
+        {
+            yield return null;
+        }
+
+        //StartCoroutine(TransitionLevel());
+    }
+
+    IEnumerator TransitionLevel()
+    {
+        Instantiate(levelTransition);
+        yield return new WaitForSeconds(.5f);
+        yield return null;
+        asyncLoad.allowSceneActivation = true;
+        //SceneManager.LoadSceneAsync(nextLevelName, LoadSceneMode.Additive);
+        //SceneManager.LoadScene(nextLevelName);
+        //yield return null;
+    }
+
+    
 }

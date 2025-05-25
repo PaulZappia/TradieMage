@@ -384,7 +384,7 @@ MonoBehaviour:
   manaPointsDisplay: {fileID: 0}
   mousePos: {x: 0, y: 0, z: 0}
   mousePosRound: {x: 0, y: 0, z: 0}
-  mouseObject: {fileID: 0}
+  mouseObject: {fileID: 4408007145759712161, guid: ff13f1ae80cc12742b4e6cad52778ffa, type: 3}
   mouseScript: {fileID: 0}
   buildRadiusCollider: {fileID: 6196900678789221055}
   buildRange: 5
