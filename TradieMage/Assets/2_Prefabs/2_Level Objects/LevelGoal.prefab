@@ -96,7 +96,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nextLevelName: 
   transitionDelay: 5
-  completionEffect: {fileID: 0}
   levelTransition: {fileID: 6598265012002008709, guid: f282ea00418d23d459b8da9e5c744311, type: 3}
 --- !u!1 &6105247438862038396
 GameObject:
@@ -216,6 +215,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1844045279121001977}
     m_Modifications:
+    - target: {fileID: 128954455709972105, guid: b16436d87d6811146975ac417b3c3062, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: 0ee43584cd6b72d49a14d708a250bd61, type: 2}
     - target: {fileID: 1007966667460006381, guid: b16436d87d6811146975ac417b3c3062, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -278,6 +281,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1844045279121001977}
     m_Modifications:
+    - target: {fileID: 128954455709972105, guid: 26f32f47eb9766a4fa1337626bce27cf, type: 3}
+      propertyPath: 'm_Materials.Array.data[0]'
+      value: 
+      objectReference: {fileID: 2100000, guid: d435addbaf4fd7340b9e604c0301120c, type: 2}
     - target: {fileID: 1007966667460006381, guid: 26f32f47eb9766a4fa1337626bce27cf, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -321,6 +328,18 @@ PrefabInstance:
     - target: {fileID: 4224541312826052417, guid: 26f32f47eb9766a4fa1337626bce27cf, type: 3}
       propertyPath: m_Name
       value: LevelFinishParticles
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283388587032726529, guid: 26f32f47eb9766a4fa1337626bce27cf, type: 3}
+      propertyPath: lengthInSec
+      value: 0.2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283388587032726529, guid: 26f32f47eb9766a4fa1337626bce27cf, type: 3}
+      propertyPath: InitialModule.startSpeed.scalar
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 5283388587032726529, guid: 26f32f47eb9766a4fa1337626bce27cf, type: 3}
+      propertyPath: InitialModule.startSpeed.minScalar
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
