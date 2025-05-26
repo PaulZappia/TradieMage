@@ -47,6 +47,7 @@ GameObject:
   - component: {fileID: 9119673315954411606}
   - component: {fileID: 289927665378079086}
   - component: {fileID: -4164386452947602624}
+  - component: {fileID: 2086440891658230141}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -200,8 +201,14 @@ MonoBehaviour:
   moveSpeed: 5.5
   jumpPower: 10
   maxJumps: 1
-  audioSource: {fileID: 0}
-  jumpSounds: []
+  audioSource: {fileID: 2086440891658230141}
+  jumpSounds:
+  - {fileID: 8300000, guid: b7b7202d1ca62254ca8795b64d1148d7, type: 3}
+  - {fileID: 8300000, guid: 2296ef70cca55cc4094cac428a0624a8, type: 3}
+  - {fileID: 8300000, guid: 8accc333fcabca445860f487dec92dcc, type: 3}
+  - {fileID: 8300000, guid: b1b48da11cd09404dba6ba49ff32ca92, type: 3}
+  - {fileID: 8300000, guid: f04f2b93963ed5846a99369a4f409d0f, type: 3}
+  - {fileID: 8300000, guid: f06f1b6b2275bd349b81885ed5fcc304, type: 3}
   jumpVolume: 0.7
   groundCheckPosition: {fileID: 1684406243467247329}
   groundCheckSize: {x: 0.5, y: 0.05}
@@ -403,13 +410,14 @@ MonoBehaviour:
   - Wooden
   - BigBox
   - Metal
-  audioSource: {fileID: 0}
+  audioSource: {fileID: 2086440891658230141}
   buildSound: {fileID: 8300000, guid: d4bad9283d180474ca506fc94d9de6d0, type: 3}
   destroySound: {fileID: 8300000, guid: 257b1503f59ed40b594667122e45ca12, type: 3}
   soundVolume: 0.7
   destroyEffectPrefab: {fileID: 0}
   selectedBoxHUDText: {fileID: 0}
   playerAnimator: {fileID: 0}
+  debugMode: 0
   coords: {fileID: 0}
   coordsRound: {fileID: 0}
   coordsPlayer: {fileID: 0}
@@ -432,6 +440,105 @@ MonoBehaviour:
     m_Bits: 256
   TeleportCollider: {x: 0.5, y: 0.5}
   teleportEffect: {fileID: 3437885349569145097}
+  audioSource: {fileID: 2086440891658230141}
+  teleportUseSound: {fileID: 8300000, guid: 16d45dd0b5ef73348863823e6ac1cd54, type: 3}
+--- !u!82 &2086440891658230141
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3116782757139063455}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: -8504486873462763314, guid: adcb347726917c0458a72aeb09cdd687, type: 2}
+  m_audioClip: {fileID: 0}
+  m_Resource: {fileID: 0}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 0
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &6196900678789221055
 GameObject:
   m_ObjectHideFlags: 0

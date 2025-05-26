@@ -20,7 +20,12 @@ public class Mouse : MonoBehaviour
     public List<Sprite> blockSprites = new List<Sprite>();
     public List<Sprite> selectionSprites = new List<Sprite>();
     public List<float> selectionSize = new List<float>();
-    
+
+    private void Awake()
+    {
+        this.transform.position = new Vector3(0, 1000, 0);
+    }
+
     void Start()
     {
         rangeCollider = rangeObject.GetComponent<CircleCollider2D>();

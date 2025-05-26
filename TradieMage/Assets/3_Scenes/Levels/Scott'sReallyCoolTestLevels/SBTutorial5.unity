@@ -398,7 +398,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3743365624939397983, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
       propertyPath: nextLevelName
-      value: TestLevel1
+      value: SBTutorial6
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743365624939397983, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
+      propertyPath: transitionDelay
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 3747553174451346715, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
       propertyPath: m_Name

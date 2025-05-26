@@ -12,6 +12,7 @@ TagManager:
   - RedSwitchController
   - GreenSwitchController
   - BlueSwitchController
+  - SFX
   layers:
   - Default
   - TransparentFX

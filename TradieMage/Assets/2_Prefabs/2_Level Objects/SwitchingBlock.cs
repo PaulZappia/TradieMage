@@ -42,7 +42,7 @@ public class SwitchingBlock : SwitchEnum
         //GetComponent<BoxCollider2D>().enabled = state;
         groundObject.GetComponent<BoxCollider2D>().enabled = state;
         blockObject.GetComponent<BoxCollider2D>().enabled = state;
-        Debug.Log(gameObject.name);
+        //Debug.Log(gameObject.name);
         //groundObject.SetActive(state);
         spriteRenderer.sprite = sprites[Convert.ToInt32(isActive)];
     }

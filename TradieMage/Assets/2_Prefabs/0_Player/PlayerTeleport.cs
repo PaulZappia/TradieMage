@@ -9,11 +9,18 @@ public class PlayerTeleporter : MonoBehaviour
     public Vector2 TeleportCollider = new Vector2(1.5f, 1.5f);
     private GameObject currentTeleporter;
     public ParticleSystem teleportEffect;
-    
-    
+
+    public AudioSource audioSource;
+    public AudioClip teleportUseSound;
+
+    private void Awake()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
     void Update()
     {
-        if (Input.GetKeyDown(KeyCode.W))
+        if (Input.GetKeyDown(KeyCode.W) || Input.GetKeyDown(KeyCode.UpArrow))
         {
             currentTeleporter = Physics2D.OverlapBox(transform.position, TeleportCollider, 0, TeleportLayer).gameObject.GetComponentInParent<Teleporter>().gameObject;
 
@@ -22,6 +29,7 @@ public class PlayerTeleporter : MonoBehaviour
             {
                 transform.position = currentTeleporter.GetComponent<Teleporter>().GetDestination().position;
                 teleportEffect.Play();
+                audioSource.PlayOneShot(teleportUseSound);
             }
         }
     }

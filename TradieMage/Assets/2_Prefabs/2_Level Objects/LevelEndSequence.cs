@@ -17,7 +17,15 @@ public class LevelEndSequence : MonoBehaviour
 
     [SerializeField] private GameObject levelTransition;
 
+    public AudioSource audioSource;
+    public AudioClip mainVictorySound;
+    public AudioClip[] victorySounds;
+    [UnityEngine.Range(0f, 1f)]
+    public float victoryVolume = 0.7f;
+    public float victoryPhraseVolume = 1f;
+
     private bool isTriggered = false;
+    private bool soundTriggered = false;
     private bool loadTriggered = false;
     private bool transitionTriggered = false;
     
@@ -61,9 +69,25 @@ public class LevelEndSequence : MonoBehaviour
         // Only run the timer logic if the sequence has been triggered
         if (isTriggered)
         {
+            if (!soundTriggered)
+            {
+                StartCoroutine(PlayVictorySound());
+                soundTriggered = true;
+            }
+
             if (!loadTriggered)
             {
-                StartCoroutine(AsyncLoadScene());
+                // Make sure the level name is valid before loading
+                if (string.IsNullOrEmpty(nextLevelName))
+                {
+                    Debug.LogWarning("No next level name specified! Defaulting to Title Screen!");
+                    // If not, set destination to Title Screen
+                    StartCoroutine(AsyncLoadScene("MainMenu"));
+                } 
+                else
+                {
+                    StartCoroutine(AsyncLoadScene(nextLevelName));
+                }
                 loadTriggered = true;
             }
             
@@ -73,14 +97,18 @@ public class LevelEndSequence : MonoBehaviour
             }
             else
             {
-                // Make sure the level name is valid before loading
-                if (string.IsNullOrEmpty(nextLevelName))
-                {
-                    Debug.LogWarning("No next level name specified!");
-                    return;
-                }
                 if (!transitionTriggered)
                 {
+                    // Make sure the level name is valid before loading
+                    /*
+                    if (string.IsNullOrEmpty(nextLevelName))
+                    {
+                        Debug.LogWarning("No next level name specified!");
+                        transitionTriggered = true;
+                        return;
+                    }
+                    */
+                
                     StartCoroutine(TransitionLevel());
                     transitionTriggered = true;
                     return;
@@ -89,10 +117,10 @@ public class LevelEndSequence : MonoBehaviour
         }
     }
 
-    IEnumerator AsyncLoadScene()
+    IEnumerator AsyncLoadScene(string level)
     {
         
-        asyncLoad = SceneManager.LoadSceneAsync(nextLevelName);
+        asyncLoad = SceneManager.LoadSceneAsync(level); // nextLevelName
         asyncLoad.allowSceneActivation = false;
 
         while (asyncLoad.progress < 0.99f)
@@ -114,5 +142,33 @@ public class LevelEndSequence : MonoBehaviour
         //yield return null;
     }
 
-    
+    IEnumerator PlayVictorySound()
+    {
+        audioSource.PlayOneShot(mainVictorySound, victoryVolume);
+        yield return new WaitForSeconds(0.5f);
+        PlayRandomVictorySound();
+        yield return null;
+    }
+
+    private void PlayRandomVictorySound()
+    {        
+        // Check if there are any jump sounds and audio source is assigned
+        if (victorySounds != null && victorySounds.Length > 0 && audioSource != null)
+        { 
+            // Select a random jump sound from the array
+            AudioClip randomJumpSound = victorySounds[UnityEngine.Random.Range(0, victorySounds.Length)];
+            audioSource.PlayOneShot(randomJumpSound, victoryPhraseVolume);
+        }
+        else
+        {
+            Debug.LogWarning("No jump sounds assigned or audio source missing!");
+        }
+    }
+     
+
+
+
+
+
+
 }

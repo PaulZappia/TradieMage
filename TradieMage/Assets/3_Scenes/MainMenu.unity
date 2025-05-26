@@ -1057,7 +1057,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a65c4124d7f2e684497f1acf43d1df99, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StartLevel: SBTutorial1
+  StartLevel: LevelSelect
   GM: {fileID: 0}
   optionsMenu: {fileID: 0}
   optionsCanvas: {fileID: 0}
@@ -1629,8 +1629,28 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 7125913960893316702, guid: a78521a94d17698409cd1ef01331543a, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1800173001}
   m_SourcePrefab: {fileID: 100100000, guid: a78521a94d17698409cd1ef01331543a, type: 3}
+--- !u!1 &1800173000 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 7125913960893316702, guid: a78521a94d17698409cd1ef01331543a, type: 3}
+  m_PrefabInstance: {fileID: 1800172999}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &1800173001
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1800173000}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11303558862795648a2fd36ca0dbfafa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1903727240
 GameObject:
   m_ObjectHideFlags: 0
