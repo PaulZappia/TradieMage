@@ -11,7 +11,9 @@ public class LevelEndSequence : MonoBehaviour
     [SerializeField] private float transitionDelay = 3f;
 
     [Tooltip("Reference to the particle system (optional)")]
-    [SerializeField] private ParticleSystem completionEffect;
+    //[SerializeField] private ParticleSystem completionEffect;
+    //[SerializeField] private ParticleSystem idleParticles;
+    private ParticleSystem[] particles;
 
     [SerializeField] private GameObject levelTransition;
 
@@ -21,16 +23,24 @@ public class LevelEndSequence : MonoBehaviour
     
     private float timer;
 
+
     AsyncOperation asyncLoad;
 
     private void Awake()
     {
         // If no particle system was assigned in the inspector, try to find one in children
-        if (completionEffect == null)
+        if (particles == null)
         {
-            completionEffect = GetComponentInChildren<ParticleSystem>();
+            particles = GetComponentsInChildren<ParticleSystem>();
+            particles[1].Play();
         }
+
+      
+        
+
+
     }
+
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
@@ -41,9 +51,9 @@ public class LevelEndSequence : MonoBehaviour
             timer = transitionDelay;
 
             // Play particle effect if available
-            if (completionEffect != null)
+            if (particles[0] != null)
             {
-                completionEffect.Play();
+                particles[0].Play();
             }
 
             // You could also notify other systems here, like disabling player controls
