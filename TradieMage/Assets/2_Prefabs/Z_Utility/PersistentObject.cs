@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Percistent : MonoBehaviour
+public class Persistent : MonoBehaviour
 {
     private void Awake()
     {
