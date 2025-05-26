@@ -95,20 +95,25 @@ public class PlayerBuild : MonoBehaviour
         mouseScript = mouseObject.GetComponent<Mouse>();
         mouseScript.isOutOfMana = mana < boxCosts[selectedBox];
 
-        if (debugMode)
+        var debugStats = GameObject.Find("DebugStats");
+        if(debugStats != null)
         {
-            GameObject.Find("DebugStats").gameObject.SetActive(true);
-            coords = GameObject.Find("Coords").GetComponent<TMP_Text>();
-            coordsRound = GameObject.Find("Coords Rounded").GetComponent<TMP_Text>();
-            coordsPlayer = GameObject.Find("Coords Player").GetComponent<TMP_Text>();
-            //raycastDebugText =  GameObject.Find("Coords").GetComponent<TMP_Text>();
-            manaPointsDisplay = GameObject.Find("ManaPointsHUDText").GetComponent<TMP_Text>();
-            selectedBoxHUDText = GameObject.Find("SelectedBoxHUD").GetComponent<TMP_Text>();
+            if (debugMode)
+            {
+                GameObject.Find("DebugStats").gameObject.SetActive(true);
+                coords = GameObject.Find("Coords").GetComponent<TMP_Text>();
+                coordsRound = GameObject.Find("Coords Rounded").GetComponent<TMP_Text>();
+                coordsPlayer = GameObject.Find("Coords Player").GetComponent<TMP_Text>();
+                //raycastDebugText =  GameObject.Find("Coords").GetComponent<TMP_Text>();
+                manaPointsDisplay = GameObject.Find("ManaPointsHUDText").GetComponent<TMP_Text>();
+                selectedBoxHUDText = GameObject.Find("SelectedBoxHUD").GetComponent<TMP_Text>();
+            }
+            else
+            {
+                GameObject.Find("DebugStats").gameObject.SetActive(false);
+            }
         }
-        else
-        {
-            GameObject.Find("DebugStats").gameObject.SetActive(false);
-        }
+        
 
 
         // Get or add AudioSource component
