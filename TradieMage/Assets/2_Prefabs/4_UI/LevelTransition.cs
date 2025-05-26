@@ -61,7 +61,7 @@ public class LevelTransition : MonoBehaviour
         // Set at final position just to make sure dawg
         rect.anchoredPosition = endPos;
         //transitionImage.transform.position = endPos;
-        Destroy(this);
+        Destroy(this.gameObject);
         yield return null;
     }
 
