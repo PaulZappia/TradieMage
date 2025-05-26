@@ -34,11 +34,6 @@ public class LevelEndSequence : MonoBehaviour
             particles = GetComponentsInChildren<ParticleSystem>();
             particles[1].Play();
         }
-
-      
-        
-
-
     }
 
 
