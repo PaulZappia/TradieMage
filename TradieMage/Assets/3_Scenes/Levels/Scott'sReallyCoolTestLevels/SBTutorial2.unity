@@ -14773,7 +14773,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: lines.Array.size
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[0]'
@@ -14787,13 +14787,20 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[2]'
-      value: "Oh, I forgot to mention... summoning blocks requires mana! What is
-        mana, you may ask? Well... it\u2019s mana! "
+      value: 'Oh, I forgot to mention... summoning blocks requires mana! What is
+        mana, you may ask? '
       objectReference: {fileID: 0}
     - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: 'lines.Array.data[3]'
-      value: 'You can retrieve mana from blocks in the world by right-clicking them,
-        unsummoning them and regenerating the mana back into your bar. '
+      value: "Well... it\u2019s mana! "
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
+      propertyPath: 'lines.Array.data[4]'
+      value: 'You can retrieve mana from blocks in the world by right-clicking them. '
+      objectReference: {fileID: 0}
+    - target: {fileID: 5796039713361247277, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
+      propertyPath: 'lines.Array.data[5]'
+      value: 'Unsummoning boxes will regenerate the mana back into your mana bar. '
       objectReference: {fileID: 0}
     - target: {fileID: 6080027368974907721, guid: 916e618c5f4675a418394cb6398d3226, type: 3}
       propertyPath: m_Name
