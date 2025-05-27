@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour
 
     public static GameObject player = null;
 
+    [SerializeField] private float restartSetTime = 3f;
+    [SerializeField] private float restartTimer = 0f;
+
+
 
     // Track if colors are currently inverted
     private bool _colorsInverted = false;
@@ -95,6 +99,22 @@ public class GameManager : MonoBehaviour
             }
             
         }
+
+        // Restart Room after holding R for 3 Seconds
+        if (Input.GetKey(KeyCode.R))
+        {
+            restartTimer += Time.deltaTime;
+
+            if (restartTimer >= restartSetTime)
+            {
+                SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            }
+        }
+        else
+        {
+            restartTimer = 0f;
+        }
+
     }
     
     public void setOptionsMenu(bool set)
