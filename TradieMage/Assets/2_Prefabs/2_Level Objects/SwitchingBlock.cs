@@ -7,7 +7,9 @@ using UnityEngine;
 public class SwitchingBlock : SwitchEnum
 {
     //public bool defaultState;
-    public List<Sprite> sprites;
+    public List<Sprite> spritesRed;
+    public List<Sprite> spritesGreen;
+    public List<Sprite> spritesBlue;
     public SpriteRenderer spriteRenderer;
     //public Collision2D collision2D;
     public GameObject groundObject;
@@ -44,7 +46,22 @@ public class SwitchingBlock : SwitchEnum
         blockObject.GetComponent<BoxCollider2D>().enabled = state;
         //Debug.Log(gameObject.name);
         //groundObject.SetActive(state);
-        spriteRenderer.sprite = sprites[Convert.ToInt32(isActive)];
+        switch (blockColour)
+        {
+            case BlockColour.Red:
+                spriteRenderer.sprite = spritesRed[Convert.ToInt32(isActive)];
+                break;
+            case BlockColour.Green:
+                spriteRenderer.sprite = spritesGreen[Convert.ToInt32(isActive)];
+                break;
+            case BlockColour.Blue:
+                spriteRenderer.sprite = spritesBlue[Convert.ToInt32(isActive)];
+                break;
+            default:
+                spriteRenderer.sprite = spritesRed[Convert.ToInt32(isActive)];
+                break;
+        }
+        
     }
     private void Update()
     {

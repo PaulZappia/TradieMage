@@ -82,7 +82,7 @@ public class LevelEndSequence : MonoBehaviour
                 {
                     Debug.LogWarning("No next level name specified! Defaulting to Title Screen!");
                     // If not, set destination to Title Screen
-                    StartCoroutine(AsyncLoadScene("MainMenu"));
+                    StartCoroutine(AsyncLoadScene("LevelSelect"));
                 } 
                 else
                 {

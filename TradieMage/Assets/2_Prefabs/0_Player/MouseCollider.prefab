@@ -178,15 +178,12 @@ MonoBehaviour:
   isOutOfMana: 0
   blockSprites:
   - {fileID: 5167228247155256966, guid: 0209114c991cca749aa4dbe9ae4e0aee, type: 3}
-  - {fileID: 5167228247155256966, guid: 42f23def9499ae840803c873d4e09a03, type: 3}
   - {fileID: 5167228247155256966, guid: cf11905c57b713f4fbcba78a09800a35, type: 3}
   selectionSprites:
   - {fileID: 5167228247155256966, guid: c9cd01de86a84d74c8f38e4d135fc7d2, type: 3}
-  - {fileID: 5167228247155256966, guid: 90d662ae971f16047a745f736b627a10, type: 3}
   - {fileID: 5167228247155256966, guid: c9cd01de86a84d74c8f38e4d135fc7d2, type: 3}
   selectionSize:
   - 0.01
-  - 1
   - 0.01
 --- !u!1 &9063044341227039952
 GameObject:

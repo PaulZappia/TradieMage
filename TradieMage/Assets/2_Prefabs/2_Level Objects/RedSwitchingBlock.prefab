@@ -195,9 +195,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isActive: 1
   blockColour: 0
-  sprites:
+  spritesRed:
   - {fileID: 1879204006, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
   - {fileID: 1226019552, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
+  spritesGreen:
+  - {fileID: -1614176101, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
+  - {fileID: -285695118, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
+  spritesBlue:
+  - {fileID: 667056789, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
+  - {fileID: -1293742310, guid: b836c7dda4e51f54a81030fd6c5f8801, type: 3}
   spriteRenderer: {fileID: 0}
   groundObject: {fileID: 407710952755284442}
   blockObject: {fileID: 9021927719693405632}
