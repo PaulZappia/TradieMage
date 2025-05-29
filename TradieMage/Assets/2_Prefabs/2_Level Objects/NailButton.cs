@@ -11,6 +11,8 @@ public class NailButton : MonoBehaviour
     public Animator buttonAnimator;
 
     public ToggleObject connectedObject1;
+    public ToggleObject connectedObject2;
+    public ToggleObject connectedObject3;
     //public GameObject connectedObject1;
 
     void Start()
@@ -41,6 +43,14 @@ public class NailButton : MonoBehaviour
             {
                 connectedObject1.isActive = true;
             }
+            if (connectedObject2 != null)
+            {
+                connectedObject2.isActive = true;
+            }
+            if (connectedObject3 != null)
+            {
+                connectedObject3.isActive = true;
+            }
         }
     }
 
@@ -57,6 +67,14 @@ public class NailButton : MonoBehaviour
             if (connectedObject1 != null)
             {
                 connectedObject1.isActive = false;
+            }
+            if (connectedObject2 != null)
+            {
+                connectedObject2.isActive = false;
+            }
+            if (connectedObject3 != null)
+            {
+                connectedObject3.isActive = false;
             }
         }
     }
