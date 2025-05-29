@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a6a78b3e5e54ad4468b097a99a7c3da6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  ParticleEffect: {fileID: 1355123308779708722}
 --- !u!1 &3958309569972644466
 GameObject:
   m_ObjectHideFlags: 0
@@ -103,6 +104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 7305909492472544576}
   - component: {fileID: 6393969863473216745}
+  - component: {fileID: 4658642044218233558}
   m_Layer: 0
   m_Name: Sprite
   m_TagString: Untagged
@@ -180,6 +182,28 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
+--- !u!95 &4658642044218233558
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3958309569972644466}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 98e58c3bb74e19c4dbf10fa26bff202e, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
 --- !u!1001 &6601151795158510899
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -237,6 +261,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 287928eaadcc24a41816eade48c5dad8, type: 3}
+--- !u!198 &1355123308779708722 stripped
+ParticleSystem:
+  m_CorrespondingSourceObject: {fileID: 5283388587032726529, guid: 287928eaadcc24a41816eade48c5dad8, type: 3}
+  m_PrefabInstance: {fileID: 6601151795158510899}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &6224261394053315806 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 1007966667460006381, guid: 287928eaadcc24a41816eade48c5dad8, type: 3}
