@@ -651,7 +651,7 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Level 2-1
 
-        The Depths'
+        Switchy Blocks'
       objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
@@ -763,7 +763,7 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Level 2-3
 
-        The Depths'
+        Magic Circles'
       objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
@@ -871,6 +871,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2028872082}
     m_Modifications:
+    - target: {fileID: 171855034657949975, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
+      propertyPath: m_text
+      value: 'Level 3-6
+
+        The Depths'
+      objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
       value: LevelCard (4)
@@ -1170,6 +1176,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2028872082}
     m_Modifications:
+    - target: {fileID: 171855034657949975, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
+      propertyPath: m_text
+      value: 'Level 3-1
+
+        The Depths'
+      objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
       value: LevelCard (2)
@@ -1276,6 +1288,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2028872082}
     m_Modifications:
+    - target: {fileID: 171855034657949975, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
+      propertyPath: m_text
+      value: 'Level 3-5
+
+        The Depths'
+      objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
       value: LevelCard (3)
@@ -1494,6 +1512,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2028872082}
     m_Modifications:
+    - target: {fileID: 171855034657949975, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
+      propertyPath: m_text
+      value: 'Level 3-3
+
+        The Depths'
+      objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
       value: LevelCard (1)
@@ -2727,6 +2751,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2028872082}
     m_Modifications:
+    - target: {fileID: 171855034657949975, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
+      propertyPath: m_text
+      value: 'Level 3-2
+
+        The Depths'
+      objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
       value: LevelCard
@@ -3024,6 +3054,12 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2028872082}
     m_Modifications:
+    - target: {fileID: 171855034657949975, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
+      propertyPath: m_text
+      value: 'Level 3-4
+
+        The Depths'
+      objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
       value: LevelCard (5)
@@ -4641,7 +4677,7 @@ PrefabInstance:
       propertyPath: m_text
       value: 'Level 2-2
 
-        The Depths'
+        Teleporting'
       objectReference: {fileID: 0}
     - target: {fileID: 660376900393446763, guid: 00403df3f173c5443bfca5407ed1892e, type: 3}
       propertyPath: m_Name
