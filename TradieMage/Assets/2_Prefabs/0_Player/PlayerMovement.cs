@@ -39,10 +39,12 @@ public class PlayerMovement : MonoBehaviour
     public float fallAnimThreshold = 1f;
 
     [Header("Debug")]
+    [SerializeField] private bool debugCanTeleport = false;
     public TMP_Text coords;
     public TMP_Text coordsRound;
     public TMP_Text coordsPlayer;
     public TMP_Text raycastDebugText;
+    private PlayerBuild playerBuild;
 
     [Header("Unsorted")]
     public RaycastHit2D raycastHit;
@@ -67,6 +69,11 @@ public class PlayerMovement : MonoBehaviour
         }
     }
 
+    private void Awake()
+    {
+        playerBuild = GetComponent<PlayerBuild>();
+    }
+
     // Update is called once per frame
     void Update()
     {
@@ -76,6 +83,14 @@ public class PlayerMovement : MonoBehaviour
 
         UpdateHUD();
         playerAnimator.SetFloat("magnitude", rigidBody.linearVelocity.magnitude);
+
+        if (debugCanTeleport)
+        {
+            if (Input.GetKeyDown(KeyCode.Mouse2)) 
+            {
+                gameObject.transform.position = playerBuild.mousePosRound;
+            }
+        }
     }
     
     public void UpdateHUD()

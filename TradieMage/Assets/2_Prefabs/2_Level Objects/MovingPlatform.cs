@@ -15,6 +15,8 @@ public class MovingPlatform : ToggleObject
     public float waitTimer = 0;
     public float maxWaitTime = 1.5f;
 
+    //public bool isInWall = false;
+
     private void Awake()
     {
         cachedTransform = transform;
@@ -73,17 +75,36 @@ public class MovingPlatform : ToggleObject
         if (collisionObject.CompareTag("Player"))
         {
             collisionObject.transform.SetParent(cachedTransform);
-            return;
+            //return;
         }
         
         // Handle box collision
         BoxCollider2D boxCollider = collisionObject.GetComponentInChildren<BoxCollider2D>();
         if (boxCollider != null && boxCollider.CompareTag("BoxTag"))
         {
-            collisionObject.transform.SetParent(cachedTransform);
+            if (boxCollider.gameObject.GetComponent<Box>().isTouchingWall == false)
+            {
+                
+                collisionObject.transform.SetParent(cachedTransform);
+            }
+            else
+            {
+                collisionObject.transform.SetParent(null);
+            }
         }
     }
-    
+
+    //private void OnCollisionStay2D(Collision2D collision)
+    //{
+    //    isInWall = collision.gameObject.layer.Equals("GroundLayer");
+    //    Debug.Log(isInWall);
+    //
+    //    if (isInWall)
+    //    {
+    //        collision.gameObject.transform.SetParent(null);
+    //    }
+    //}
+
     private void OnCollisionExit2D(Collision2D collision)
     {
         GameObject collisionObject = collision.gameObject;
