@@ -30,7 +30,8 @@ public class LevelEndSequence : MonoBehaviour
     private bool transitionTriggered = false;
     
     private float timer;
-
+    [Header("Letter Visibility")]
+    public bool isLetterVisible = true;
 
     AsyncOperation asyncLoad;
 
@@ -40,7 +41,12 @@ public class LevelEndSequence : MonoBehaviour
         if (particles == null)
         {
             particles = GetComponentsInChildren<ParticleSystem>();
-            particles[1].Play();
+            if(isLetterVisible)
+                particles[1].Play();
+        }
+        if (!isLetterVisible)
+        {
+            GetComponentInChildren<SpriteRenderer>().enabled = false;
         }
     }
 
