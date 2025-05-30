@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class StartMenuController : MonoBehaviour
 {
-    public string StartLevel = "TestLevel1";
+    public string StartLevel = "LevelSelect";
 
     public GameManager GM;
     public Canvas optionsMenu;

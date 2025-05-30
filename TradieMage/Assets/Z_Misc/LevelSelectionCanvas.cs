@@ -123,4 +123,9 @@ public class LevelSelectionCanvas : MonoBehaviour
     }
 
 
+    public void OnBackClick()
+    {
+        SceneManager.LoadScene("MainMenu");
+    }
+
 }
