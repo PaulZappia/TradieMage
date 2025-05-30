@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 using System.Collections;
 using TMPro;
 
-public class LevelSelectionCanvas : MonoBehaviour, IPointerDownHandler
+public class LevelSelectionCanvas : MonoBehaviour
 {
 
     public Image leftButton;
@@ -35,22 +35,21 @@ public class LevelSelectionCanvas : MonoBehaviour, IPointerDownHandler
 
     void Start()
     {
-        var buttons = GetComponentsInChildren<Image>();
-        leftButton = buttons[0];
+        //var buttons = GetComponentsInChildren<Image>();
+        //leftButton = buttons[0];
         //rightButton = buttons[1];
     }
 
-
-    public void OnPointerDown(PointerEventData eventData)
+    public void RightButton()
     {
-
-        Debug.Log(eventData);//i am very confused and don't understand what's happening.
-        //SceneManager.LoadScene(levelDestination);
-        //StartCoroutine(LoadLevel());
-        //slide panel
         StartCoroutine(AnimateTransition());
-
     }
+
+    public void LeftButton()
+    {
+        StartCoroutine(AnimateTransition());
+    }
+
 
     IEnumerator AnimateTransition()
     {
