@@ -95,7 +95,8 @@ public class PlayerMovement : MonoBehaviour
     
     public void UpdateHUD()
     {
-        coordsPlayer.text = "PlayerX: " + gameObject.transform.position.x.ToString("F2") + "\n" + "PlayerY: " + gameObject.transform.position.y.ToString("F2");
+        if (coordsPlayer != null)
+            coordsPlayer.text = "PlayerX: " + gameObject.transform.position.x.ToString("F2") + "\n" + "PlayerY: " + gameObject.transform.position.y.ToString("F2");
     }
     
     public void Move(InputAction.CallbackContext context)
