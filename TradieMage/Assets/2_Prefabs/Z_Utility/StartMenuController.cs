@@ -10,6 +10,7 @@ public class StartMenuController : MonoBehaviour
     public Canvas optionsMenu;
     public Canvas optionsCanvas;
 
+
     private void Start()
     {
         GM = GameObject.Find("GameManager").GetComponent<GameManager>();
@@ -18,6 +19,11 @@ public class StartMenuController : MonoBehaviour
         //optionsCanvas = optionsMenu.GetComponent<Canvas>();
     }
 
+
+    public void OnCreditsClick()
+    {
+        SceneManager.LoadScene("Credits");
+    }
 
     public void OnStartClick()
     {
