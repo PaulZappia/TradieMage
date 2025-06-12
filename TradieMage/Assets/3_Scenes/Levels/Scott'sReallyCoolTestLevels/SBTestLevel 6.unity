@@ -216,6 +216,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1c8db44af93f44246b00dfdd57c606b6, type: 3}
+--- !u!4 &558080785 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+  m_PrefabInstance: {fileID: 1250965622}
+  m_PrefabAsset: {fileID: 0}
 --- !u!114 &653087748 stripped
 MonoBehaviour:
   m_CorrespondingSourceObject: {fileID: 2333294049563753064, guid: daedfebfe2e0b3643b2fcf741111dc45, type: 3}
@@ -274,6 +279,10 @@ PrefabInstance:
     - target: {fileID: 1844045279121001977, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3743365624939397983, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
+      propertyPath: nextLevelName
+      value: SBTestLevel 9
       objectReference: {fileID: 0}
     - target: {fileID: 3743365624939397983, guid: 8281a2b3f2afc8044ae425e155f0a8c1, type: 3}
       propertyPath: transitionDelay
@@ -483,6 +492,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!4 &1080800082 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+  m_PrefabInstance: {fileID: 1679638559}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1090407690
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -696,6 +710,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 2774551726474106044, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 1080800082}
     - target: {fileID: 6105040313413754561, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: destination
       value: 
@@ -1079,11 +1097,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -11.96
+      value: -12
       objectReference: {fileID: 0}
     - target: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.01
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1596237769921641154, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1121,6 +1139,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Teleporter (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 2774551726474106044, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
+      propertyPath: destination
+      value: 
+      objectReference: {fileID: 558080785}
     - target: {fileID: 6105040313413754561, guid: 73fcbfd08f03f6343ae9ec82df313b09, type: 3}
       propertyPath: destination
       value: 

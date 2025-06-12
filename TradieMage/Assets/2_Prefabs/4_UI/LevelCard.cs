@@ -14,6 +14,7 @@ public class LevelCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
 
     [SerializeField] private Sprite defaultCardSprite;
     [SerializeField] private Sprite hoverCardSprite;
+    [SerializeField] private Sprite lockedCardSprite;
     public float hoverScale = 1.1f;
     public float clickScale = 0.95f;
     public float scaleSpeed = 8f;
@@ -59,6 +60,11 @@ public class LevelCard : MonoBehaviour, IPointerEnterHandler, IPointerExitHandle
         if (lockOverlay != null)
         {
             lockOverlay.SetActive(isLocked);
+        }
+        if (isLocked)
+        {
+            cardImage.sprite = lockedCardSprite;
+            levelText.text = "\nLocked";
         }
     }
 

@@ -52,10 +52,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ccd22f0c11698654e96e3ec729a28bcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  levelDestination: 
   isLocked: 0
   lockOverlay: {fileID: 0}
   defaultCardSprite: {fileID: 21300000, guid: 6e1fb4043b90394419cc4b88c77942f1, type: 3}
   hoverCardSprite: {fileID: 21300000, guid: 9c05f9d8d694bcb4b86bb6937919ed45, type: 3}
+  lockedCardSprite: {fileID: 21300000, guid: 9c05f9d8d694bcb4b86bb6937919ed45, type: 3}
   hoverScale: 1.1
   clickScale: 0.95
   scaleSpeed: 8
