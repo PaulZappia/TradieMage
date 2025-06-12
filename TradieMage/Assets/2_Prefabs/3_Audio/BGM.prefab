@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6134154962720406792}
   - component: {fileID: 9125943858568967186}
+  - component: {fileID: 1613949089447325443}
   m_Layer: 0
   m_Name: BGM
   m_TagString: Untagged
@@ -129,3 +130,15 @@ AudioSource:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &1613949089447325443
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7125913960893316702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ef46d320766c9eb4ea46ebd81e7a77ea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
