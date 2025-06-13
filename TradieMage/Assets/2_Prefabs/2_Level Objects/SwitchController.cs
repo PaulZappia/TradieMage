@@ -1,4 +1,5 @@
 using System.Collections.Generic;
+using System.Collections;
 using UnityEngine;
 
 public class SwitchController : SwitchEnum
@@ -15,11 +16,20 @@ public class SwitchController : SwitchEnum
         previousSwitchActiveState = isSwitchActive;
         gameObject.tag = blockColour + "SwitchController";
     }
-
+    /*
     private void Start()
     {
-        ToggleAll(isSwitchActive);
+        StartCoroutine(waitToToggle());
     }
+    */
+
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.01f);
+        ToggleAll(isSwitchActive);
+        Debug.Log("ToggleAll");
+    }
+
 
     private void PopulateChildBlocks()
     {
