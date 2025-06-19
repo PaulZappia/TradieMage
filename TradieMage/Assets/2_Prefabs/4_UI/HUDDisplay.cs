@@ -15,7 +15,8 @@ public class HUDDisplay : MonoBehaviour
 
 
     // Block Select
-    //[Header("Block Select")]
+    [Header("Block Select")]
+    public Image selectedBox;
 
 
     [Header("Mana")]
@@ -37,11 +38,16 @@ public class HUDDisplay : MonoBehaviour
     private void Start()
     {
         canvas.worldCamera = mainCamera;
+        selectedBox.sprite = player.mouseScript.blockSprites[player.selectedBox];
     }
 
     // Update is called once per frame
     void Update()
     {
+        //box
+        selectedBox.sprite = player.mouseScript.blockSprites[player.selectedBox];
+
+        //mana
         mana = player.mana;
         
         for (int i = 0; i < availableMana.Length; i++)
