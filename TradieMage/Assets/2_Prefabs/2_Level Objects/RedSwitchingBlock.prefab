@@ -220,7 +220,7 @@ GameObject:
   - component: {fileID: 3027482558785000546}
   - component: {fileID: 1144577237521857439}
   - component: {fileID: 6409141578941621815}
-  m_Layer: 7
+  m_Layer: 6
   m_Name: RedSwitchingBlockObject
   m_TagString: SwitchingBlock
   m_Icon: {fileID: 0}
