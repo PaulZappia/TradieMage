@@ -6,6 +6,7 @@ public class PauseMenu : MonoBehaviour
    
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject optionsMenu;
+    [SerializeField] GameObject howToPlayMenu;
     public GameObject player;
 
 
@@ -57,6 +58,14 @@ public class PauseMenu : MonoBehaviour
         SceneManager.LoadScene("MainMenu");
         pauseMenu.SetActive(false);
         Time.timeScale = 1;
+    }
+
+
+    public void HowToPlay()
+    {
+        pauseMenu.SetActive(false);
+        howToPlayMenu.SetActive(true);
+
     }
 
 

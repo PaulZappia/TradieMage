@@ -19,6 +19,8 @@ public class GameManager : MonoBehaviour
     public GameObject pauseMenu;
     [Header("Options Menu")]
     public GameObject optionsMenu;
+    [Header("HowToPlay Menu")]
+    public GameObject howToPlayMenu;
 
     public static GameObject player = null;
 
@@ -62,6 +64,7 @@ public class GameManager : MonoBehaviour
 
         DontDestroyOnLoad(pauseMenu.gameObject);
         DontDestroyOnLoad(optionsMenu.gameObject);
+        DontDestroyOnLoad(howToPlayMenu.gameObject);
     }
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
