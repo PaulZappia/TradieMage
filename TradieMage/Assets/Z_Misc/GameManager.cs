@@ -90,7 +90,7 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         // Add any game-wide update logic here
-        if (Input.GetKeyDown(KeyCode.P))
+        if (Input.GetKeyDown(KeyCode.P) || Input.GetKeyDown(KeyCode.Escape))
         {
             if (pauseMenu.GetComponent<PauseMenu>().isActiveAndEnabled)
             {

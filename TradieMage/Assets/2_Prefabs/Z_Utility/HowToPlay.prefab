@@ -474,7 +474,7 @@ MonoBehaviour:
 
     Jump: Space
 
-    Pause: P
+    Pause: Escape or P
 
     Place
     block: Left click
